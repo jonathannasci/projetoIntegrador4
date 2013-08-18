@@ -5,11 +5,18 @@ inicializar o diretorio
 necessária para se conectar com o servidor github
 
 Criação:
-execute no Git Bash o comando
+(execute no Git Bash os comandos abaixo.)
 
-	ssh-keygen -t rsa -C "email_usado_no_github@email.com"
+Verifique se a pasta padrão de chaves SSH existem em seu computador com:
+cd ~/.ssh
 
-, na proxima pergunta dar enter para deixar o padrão mesmo.
+Caso contrário, execute o comando a seguir:
+mkdir ~/.ssh
+
+execute o comando:
+ssh-keygen -t rsa -C "email_usado_no_github@email.com"
+
+na proxima pergunta dar enter para deixar o padrão mesmo.
 depois sera solicitado uma senha (passphrase), crie uma depois
 confirme digitando novamente.
 
