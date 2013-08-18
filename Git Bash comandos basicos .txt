@@ -1,0 +1,77 @@
+git init    
+inicializar o diretorio
+
+====================== Chave SSH ===================================
+necessária para se conectar com o servidor github
+
+Criação:
+execute no Git Bash o comando
+
+	ssh-keygen -t rsa -C "email_usado_no_github@email.com"
+
+, na proxima pergunta dar enter para deixar o padrão mesmo.
+depois sera solicitado uma senha (passphrase), crie uma depois
+confirme digitando novamente.
+
+vá até C:\Users\SEU USUARIO\.ssh\ e copie TODO conteudo do arquivo id_rsa.pub 
+
+Agora no GitHub, 
+vá em “Account Settings” e depois “SSH Public Keys”. 
+Clique “Add another public key”. 
+Informe um título para o computador onde a chave foi gerada 
+e no campo “Key” cole TODO o conteúdo do arquivo id_rsa.pub
+
+====================================================================
+
+
+=======================linkando o servidor diretorio local =======================
+git remote add origin git@github.com:wllm-git/projetoIntegrador4.git
+likar a pasta que o git foi inicializado com o servidor do projeto
+
+
+git pull
+baixar os arquivos do servidor
+===================================================================================
+
+
+===================== Atenção ==============================
+caso o comando 'git pull' der o erro 'The current branch master is not tracking anything.' 
+ou alguma coisa semelhante envolvendo o nome tracking, executar os 2 comandos abaixo e tentar novamente o
+'git pull'
+
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+============================================================
+
+
+==================== Enviando alterações para o servidor ========================
+git add .   
+adiciona todas as suas alterações no repositorio local
+
+
+git commit -am "escreva um comentario"
+cria um commit para enviar para o servidor com as suas alterações
+
+
+git push origin master
+envia todos os commits feitos até o momento para o servidor
+==================================================================================
+
+========================= Usando Branch=========================
+git branch   -> ver todos os branch criados
+
+git co -b outroBranch   -> cria um branch com o nome 'outroBranch' e o seleciona automaticamente
+
+git co nomeBranch   -> seleciona um branch, nesse caso o 'nomeBranch'
+
+git merge outroBranch -> verifica diferença entra os arquivos do branch que você esta e o do 'outroBranch' 
+caso encontre alguma, será feita uma mesclagem dos arquivos no branch que você esta 
+(o 'outroBranch' NÃO sofrerá modificações)
+
+git branch -D outroBranch  -> deleta o branch escolhido, nesse caso o 'outroBranch'
+
+		**** OBS ****
+caso os comandos 'git co -b outroBranch' e 'git co nomeBranch'
+der erro, substituir 'co' por 'checkout'
+		
+=======================================================================
