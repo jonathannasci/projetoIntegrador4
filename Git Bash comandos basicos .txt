@@ -75,3 +75,12 @@ caso os comandos 'git co -b outroBranch' e 'git co nomeBranch'
 der erro, substituir 'co' por 'checkout'
 		
 =======================================================================
+
+
+=========================== Desfazendo Alterações =========================
+git co teste.txt		-> reverte alterações no arquivo 'teste.txt' depois do ultimo commit
+git checkout arquivo.txt  (mesma coisa)
+
+
+git reset --hard		-> reverte TODAS as alterações feitas depois do ultimo commit
+===========================================================================
