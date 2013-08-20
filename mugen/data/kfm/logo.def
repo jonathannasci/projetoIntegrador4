@@ -1,6 +1,3 @@
-[Info]
-localcoord = 320,240
-
 [SceneDef]
 spr = logo.sff
 

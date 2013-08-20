@@ -1,4 +1,4 @@
-ï»¿; The CMD file.
+; The CMD file.
 ;
 ; Two parts: 1. Command definition and  2. State entry
 ; (state entry is after the commands def section)
@@ -85,7 +85,7 @@
 ;   you had performed the move rapidly in succession during the valid
 ;   time. To understand this, try setting buffer.time to 30 and hit
 ;   a fast attack, such as KFM's light punch.
-;   The default value for this is set in the [Defaults] section below.
+;   The default value for this is set in the [Defaults] section below. 
 ;   This parameter does not affect hold-only commands (eg. /F). It
 ;   will be assumed to be 1 for those commands.
 ;
@@ -174,16 +174,6 @@ time = 20
 
 ;-| Special Motions |------------------------------------------------------
 [Command]
-name = "blocking"
-command = $F,x
-time = 3
-
-[Command]
-name = "blocking" ;Same name as above (buttons in opposite order)
-command = x,$F
-time = 3
-
-[Command]
 name = "upper_x"
 command = ~F, D, DF, x
 
@@ -218,18 +208,6 @@ command = ~D, DB, B, y
 [Command]
 name = "QCB_xy"
 command = ~D, DB, B, x+y
-
-[Command]
-name = "QCF_a"
-command = ~D, DF, F, a
-
-[Command]
-name = "QCF_b"
-command = ~D, DF, F, b
-
-[Command]
-name = "QCF_ab"
-command = ~D, DF, F, a+b
 
 [Command]
 name = "FF_ab"
@@ -375,6 +353,7 @@ time = 1
 ;===========================================================================
 ;---------------------------------------------------------------------------
 ;Smash Kung Fu Upper (uses one super bar)
+;ƒXƒ}ƒbƒVƒ…EƒJƒ“ƒt[EƒEƒbƒp[iƒQ[ƒWƒŒƒxƒ‹‚Pj
 [State -1, Smash Kung Fu Upper]
 type = ChangeState
 value = 3050
@@ -385,10 +364,10 @@ trigger1 = ctrl
 trigger2 = hitdefattr = SC, NA, SA, HA
 trigger2 = stateno != [3050,3100)
 trigger2 = movecontact
-trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
 
 ;---------------------------------------------------------------------------
 ;Triple Kung Fu Palm (uses one super bar)
+;ŽO—óƒJƒ“ƒt[“Ë‚«ŽèiƒQ[ƒWƒŒƒxƒ‹‚Pj
 [State -1, Triple Kung Fu Palm]
 type = ChangeState
 value = 3000
@@ -400,8 +379,6 @@ trigger2 = statetype != A
 trigger2 = hitdefattr = SC, NA, SA, HA
 trigger2 = stateno != [3000,3050)
 trigger2 = movecontact
-trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
-
 
 ;===========================================================================
 ;This is not a move, but it sets up var(1) to be 1 if conditions are right
@@ -420,11 +397,11 @@ trigger1 = ctrl
 trigger2 = (stateno = [200,299]) || (stateno = [400,499])
 trigger2 = stateno != 440 ;Except for sweep kick
 trigger2 = movecontact
-trigger3 = stateno = 1310 || stateno = 1330 ;From blocking
 var(1) = 1
 
 ;---------------------------------------------------------------------------
 ;Fast Kung Fu Knee (1/3 super bar)
+;‘¬‚¢ƒJƒ“ƒt[R‚èiƒQ[ƒWƒŒƒxƒ‹‚P^‚Rj
 [State -1, Fast Kung Fu Knee]
 type = ChangeState
 value = 1070
@@ -434,6 +411,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Light Kung Fu Knee
+;ƒJƒ“ƒt[R‚èiŽãj
 [State -1, Light Kung Fu Knee]
 type = ChangeState
 value = 1050
@@ -442,6 +420,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Strong Kung Fu Knee
+;ƒJƒ“ƒt[R‚èiŽãj
 [State -1, Strong Kung Fu Knee]
 type = ChangeState
 value = 1060
@@ -450,6 +429,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Fast Kung Fu Palm (1/3 super bar)
+;‘¬‚¢ƒJƒ“ƒt[“Ë‚«ŽèiƒQ[ƒWƒŒƒxƒ‹‚P^‚Rj
 [State -1, Fast Kung Fu Palm]
 type = ChangeState
 value = 1020
@@ -459,6 +439,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Light Kung Fu Palm
+;ƒJƒ“ƒt[“Ë‚«ŽèiŽãj
 [State -1, Light Kung Fu Palm]
 type = ChangeState
 value = 1000
@@ -467,6 +448,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Strong Kung Fu Palm
+;ƒJƒ“ƒt[“Ë‚«Žèi‹­j
 [State -1, Strong Kung Fu Palm]
 type = ChangeState
 value = 1010
@@ -475,6 +457,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Fast Kung Fu Upper (1/3 super bar)
+;‘¬‚¢ƒJƒ“ƒt[EƒEƒbƒp[
 [State -1, Fast Kung Fu Upper]
 type = ChangeState
 value = 1120
@@ -484,6 +467,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Light Kung Fu Upper
+;ƒJƒ“ƒt[EƒEƒbƒp[iŽãj
 [State -1, Light Kung Fu Upper]
 type = ChangeState
 value = 1100
@@ -492,6 +476,7 @@ trigger1 = var(1) ;Use combo condition (above)
 
 ;---------------------------------------------------------------------------
 ;Strong Kung Fu Upper
+;ƒJƒ“ƒt[EƒEƒbƒp[i‹­j
 [State -1, Strong Kung Fu Upper]
 type = ChangeState
 value = 1110
@@ -523,71 +508,10 @@ value = 1210
 triggerall = command = "QCB_y"
 trigger1 = var(1) ;Use combo condition (above)
 
-;---------------------------------------------------------------------------
-;High Kung Fu Blocking (High)
-[State -1, High Kung Fu Blocking High]
-type = ChangeState
-value = 1300
-triggerall = command = "blocking"
-triggerall = command != "holddown"
-trigger1 = ctrl
-trigger1 = statetype != A
-trigger2 = stateno = 1310 || stateno = 1330
-trigger2 = time > 0
-
-;---------------------------------------------------------------------------
-;High Kung Fu Blocking (Low)
-[State -1, High Kung Fu Blocking Low]
-type = ChangeState
-value = 1320
-triggerall = command = "blocking"
-triggerall = command = "holddown"
-trigger1 = ctrl
-trigger1 = statetype != A
-trigger2 = stateno = 1310 || stateno = 1330
-trigger2 = time > 0
-
-;---------------------------------------------------------------------------
-;High Kung Fu Blocking (Air)
-[State -1, High Kung Fu Blocking Low]
-type = ChangeState
-value = 1340
-triggerall = command = "blocking"
-triggerall = command != "holdup"
-triggerall = command != "holddown"
-trigger1 = ctrl
-trigger1 = statetype = A
-trigger2 = stateno = 1350
-trigger2 = time > 0
-
-;---------------------------------------------------------------------------
-;Far Kung Fu Zankou
-[State -1, Far Kung Fu Zankou]
-type = ChangeState
-value = 1420
-triggerall = command = "QCF_ab"
-triggerall = power >= 330
-trigger1 = var(1) ;Use combo condition (above)
-
-;---------------------------------------------------------------------------
-;Light Kung Fu Zankou
-[State -1, Light Kung Fu Zankou]
-type = ChangeState
-value = 1400
-triggerall = command = "QCF_a"
-trigger1 = var(1) ;Use combo condition (above)
-
-;---------------------------------------------------------------------------
-;Strong Kung Fu Zankou
-[State -1, Strong Kung Fu Zankou]
-type = ChangeState
-value = 1410
-triggerall = command = "QCF_b"
-trigger1 = var(1) ;Use combo condition (above)
-
 ;===========================================================================
 ;---------------------------------------------------------------------------
 ;Run Fwd
+;ƒ_ƒbƒVƒ…
 [State -1, Run Fwd]
 type = ChangeState
 value = 100
@@ -597,6 +521,7 @@ trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ;Run Back
+;Œã‘Þƒ_ƒbƒVƒ…
 [State -1, Run Back]
 type = ChangeState
 value = 105
@@ -606,6 +531,7 @@ trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ;Kung Fu Throw
+;“Š‚°
 [State -1, Kung Fu Throw]
 type = ChangeState
 value = 800
@@ -623,10 +549,10 @@ trigger2 = (p2statetype = S) || (p2statetype = C)
 trigger2 = p2movetype != H
 
 
-
 ;===========================================================================
 ;---------------------------------------------------------------------------
 ;Stand Light Punch
+;—§‚¿Žãƒpƒ“ƒ`
 [State -1, Stand Light Punch]
 type = ChangeState
 value = 200
@@ -639,6 +565,7 @@ trigger2 = time > 6
 
 ;---------------------------------------------------------------------------
 ;Stand Strong Punch
+;—§‚¿‹­ƒpƒ“ƒ`
 [State -1, Stand Strong Punch]
 type = ChangeState
 value = 210
@@ -651,6 +578,7 @@ trigger3 = (stateno = 230) && time > 6
 
 ;---------------------------------------------------------------------------
 ;Stand Light Kick
+;—§‚¿ŽãƒLƒbƒN
 [State -1, Stand Light Kick]
 type = ChangeState
 value = 230
@@ -663,6 +591,7 @@ trigger3 = (stateno = 230) && time > 9
 
 ;---------------------------------------------------------------------------
 ;Standing Strong Kick
+;—§‚¿‹­ƒLƒbƒN
 [State -1, Standing Strong Kick]
 type = ChangeState
 value = 240
@@ -675,6 +604,7 @@ trigger3 = (stateno = 230) && time > 6
 
 ;---------------------------------------------------------------------------
 ;Taunt
+;’§”­
 [State -1, Taunt]
 type = ChangeState
 value = 195
@@ -684,6 +614,7 @@ trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ;Crouching Light Punch
+;‚µ‚á‚ª‚ÝŽãƒpƒ“ƒ`
 [State -1, Crouching Light Punch]
 type = ChangeState
 value = 400
@@ -694,6 +625,7 @@ trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
 ;Crouching Strong Punch
+;‚µ‚á‚ª‚Ý‹­ƒpƒ“ƒ`
 [State -1, Crouching Strong Punch]
 type = ChangeState
 value = 410
@@ -706,6 +638,7 @@ trigger2 = (time > 9) || (movecontact && time > 5)
 
 ;---------------------------------------------------------------------------
 ;Crouching Light Kick
+;‚µ‚á‚ª‚ÝŽãƒLƒbƒN
 [State -1, Crouching Light Kick]
 type = ChangeState
 value = 430
@@ -718,6 +651,7 @@ trigger2 = (time > 9) || (movecontact && time > 5)
 
 ;---------------------------------------------------------------------------
 ;Crouching Strong Kick
+;‚µ‚á‚ª‚Ý‹­ƒLƒbƒN
 [State -1, Crouching Strong Kick]
 type = ChangeState
 value = 440
@@ -730,6 +664,7 @@ trigger2 = (time > 9) || (movecontact && time > 5)
 
 ;---------------------------------------------------------------------------
 ;Jump Light Punch
+;‹ó’†Žãƒpƒ“ƒ`
 [State -1, Jump Light Punch]
 type = ChangeState
 value = 600
@@ -764,6 +699,7 @@ trigger2 = stateno = 1350 ;Air blocking
 
 ;---------------------------------------------------------------------------
 ;Jump Strong Kick
+;‹ó’†‹­ƒLƒbƒN
 [State -1, Jump Strong Kick]
 type = ChangeState
 value = 640

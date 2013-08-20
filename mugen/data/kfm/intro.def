@@ -2,9 +2,6 @@
 
 ; This storyboard uses several scenes
 
-[Info]
-localcoord = 320,240
-
 [SceneDef]
 spr = intro.sff
 

@@ -1,8 +1,5 @@
 ;Game over storyboard.
 
-[Info]
-localcoord = 320,240
-
 [SceneDef]
 spr = gameover.sff
 

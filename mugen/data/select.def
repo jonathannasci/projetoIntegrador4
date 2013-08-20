@@ -5,7 +5,7 @@
  ;Use the format:
  ;    charname, stagefilename
  ;
- ;eg. For a player with filename "kfm",
+ ;eg. For a player with filename "kfm", 
  ;    and stage filename "stages/mybg.def"
  ;type (without the semicolon):
  ;    kfm, stages/mybg.def
@@ -19,14 +19,10 @@
  ;be selected for that player. eg.
  ;    kfm, random
  ;
- ;Zipped characters are also supported.
- ;Place the ZIP file in the chars/ directory. The syntax is as
- ;follows:
- ;    zipname.zip:defname.def, stages/mybg.def
- ;For example, if you have newsuave.def in suave.zip, the syntax is:
- ;    suave.zip:newsuave.def, stages/mybg.def
- ;If your def file has the same name as the zip file (eg. suave.def
- ;in suave.zip), you can just put the name of the zip file alone:
+ ;Zipped characters are also supported (experimental).
+ ;Place the ZIP file in the chars/ directory. The name of the
+ ;character's .def must match the name of the .zip. For example, if
+ ;you have suave.def, then the zip file should be named suave.zip:
  ;    suave.zip, stages/mybg.def
  ;
  ;Optional parameters may follow on the same line, separated
@@ -71,13 +67,16 @@
  ;Insert your characters below.
 
 kfm, stages/kfm.def
-kfm720, stages/kfm.def
+kfm, stages/kfm.def
+kfm, stages/kfm.def
 
 ;-----------------------
 [ExtraStages]
  ;Put extra stages here. They will be available in VS and Watch modes.
  ;For example, you can insert "stages/mybg.def".
-stages/stage0-720.def
+
+stages/kfm.def
+stages/stage0.def
 
 ;---------------------------------------------------------------------
 [Options]

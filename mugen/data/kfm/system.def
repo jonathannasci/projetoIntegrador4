@@ -1,26 +1,21 @@
 ; Definitions of system screens
+; "KFM" motif - for use with M.U.G.E.N 2001.11.14
 
-; Motif: KFM
-; Optimal resolution: 640x480
-; Supported languages: en
+; This is a copy of system.def from the data/ directory.
+; See readme.txt for details on motifs.
+
+; *2001.11.14 NEW* symbolizes any new functionality added for the 2001.11.14
+; version of M.U.G.E.N.
 
 ; Notes about fonts:
-;   - up to 10 fonts can be specified in the [Files] section.
+;   - do not index fonts greater than 9 (crash)
 ;   - fonts indexed here do not refer to the ones in fight.def
-;   - fonts are search in directories in the following order:
-;     1. system directory
-;     2. mugen program directory (not recommended to keep custom fonts here)
-;     3. data/ (not recommended to keep custom fonts here)
-;     4. font/
 
 ;----------------------------
 ;*** This group is changed for KFM ***
 [Info]
 name = "KFM"              ;Name of motif
 author = "Elecbyte"       ;Motif author name
-versiondate = 01,01,2011  ;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
-mugenversion = 1.0        ;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
-localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN 1.0)
 
 ;----------------------------
 ;Directories are checked in this order:
@@ -50,35 +45,23 @@ font3 = font/jg.fnt       ;System fonts
 [Music]
  ;Put a filename for a MOD, MP3 or MIDI here, or just leave it
  ;blank if you do not want music. If an invalid filename is
- ;given, then no music will play.
+ ;given, then no music will play. To play CD audio, put
+ ;the track number followed by ".da". For example, to play
+ ;track 3 from a music CD at the title screen, use:
+ ;  title.bgm = 3.da
  ;To play mymusic.mp3 from the sound/ directory, put:
  ;  title.bgm = sound/mymusic.mp3
  ;Music will continue to play between screens if the files names
  ;are the same, and both BGMs are specified to loop.
   ;Music to play at title screen.
 title.bgm = 
-title.bgm.volume = 100    ;volume scaling factor in percent. 100 is default
 title.bgm.loop = 1        ;Set to 0 to prevent looping
-title.bgm.loopstart = 
-title.bgm.loopend = 
   ;Music to play at char select screen.
 select.bgm = 
-select.bgm.volume = 
-select.bgm.loop = 1
-select.bgm.loopstart =
-select.bgm.loopend = 
+select.bgm.loop = 0
   ;Music to play at versus screen.
 vs.bgm = 
-vs.bgm.volume = 
-vs.bgm.loop = 0
-vs.bgm.loopstart =
-vs.bgm.loopend = 
-  ;Music to play at victory screen.
-victory.bgm = 
-victory.bgm.volume =
-victory.bgm.loop = 0
-victory.bgm.loopstart =
-victory.bgm.loopend = 
+vs.bgm.loop = 1
 
 ;-------------------------------------------------------------------
 ;Title screen definition
@@ -92,7 +75,7 @@ menu.item.active.font = 3,5,0
 menu.item.spacing = 0, 13
 ; Names for each of the items in the menu. Names must be in quotes.
 ; Use "" to disable an item. If all are disabled, goes straight to demo mode
-; (hold Esc to quit demos).
+; (hold Esc to quit demos). *2001.11.14 NEW*
 menu.itemname.arcade = "ARCADE"
 menu.itemname.versus = "VS MODE"
 menu.itemname.teamarcade = "TEAM ARCADE"
@@ -131,16 +114,6 @@ start = 0,24
 type = normal
 spriteno = 10,0
 start = 0,144
-
-;----------------------------
-[Infobox] ;(new in MUGEN 1.0)
-text.font = 3,0,1
-
-;----------------------------
-[Infobox Text] ;(new in MUGEN 1.0)
-This is the "KFM" example motif.
-_
-This motif works best at a resolution such as 640x480 or 1280x960. Open mugen.cfg with a text editor and change the GameWidth and GameHeight parameters.
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -372,7 +345,6 @@ vsscreen.enabled = 0      ;Set to 1 to display versus screen, 0 to disable
 title.waittime = 600      ;Time to wait at title before starting demo mode
 fight.endtime = 1500      ;Time to display the fight before returning to title
 fight.playbgm = 0         ;Set to 1 to enable in-fight BGM, 0 to disable
-fight.stopbgm = 1		  ;Set to 1 to stop title BGM (only if playbgm = 0)
 fight.bars.display = 0    ;Set to 1 to display lifebar, 0 to disable
 intro.waitcycles = 1      ;Cycles to wait before intro cutscene is played again
 debuginfo = 0             ;Set to 0 to hide debugging info (debug mode only)
@@ -424,6 +396,7 @@ storyboard = credits.def  ;Credits storyboard filename
 ;Survival mode results screen definition
 ;This is the screen that is shown when you win in survival mode.
 ;It will not be displayed if the winning character has an ending.
+;Whole group is *2001.11.14 NEW*
 [Survival Results Screen]
 enabled = 1
 winstext.text = Rounds survived: %i  ;Use %i for win counter

@@ -6,9 +6,6 @@
 ; Overlay anims are used to put the darkening bands at the top
 ; and bottom of the screen for a "fading text" effect.
 
-[Info]
-localcoord = 320,240
-
 [SceneDef]
 spr = credits.sff
 startscene = 0         ;Starting scene number (for debugging)

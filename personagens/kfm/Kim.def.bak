@@ -1,0 +1,25 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Kung Fu Man"
+displayname = "Kung Fu Man"
+versiondate = 09,30,2009
+mugenversion = 1.0
+author = "Elecbyte"
+pal.defaults = 1,2,3,4
+
+[Files]
+sprite = Kim.sff
+anim = Kim.air
+sound = Kim.snd
+cmd = Kim.cmd
+cns = Kim.cns
+stcommon = common1.cns
+st = Kim.cns
+
+[Arcade]
+intro.storyboard = intro.def
+ending.storyboard = ending.def

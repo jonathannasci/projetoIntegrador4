@@ -1,152 +1,149 @@
-﻿        M.U.G.E.N
 
-  Version 1.0
-  18 Jan 2011
+                           M. U. G. E. N
 
-  (c) 1999-2011 Elecbyte
+                  beta release version 2002.04.14
+                           2002 Elecbyte
+                             ---------
 
+      Please read this whole document before proceeding.
 
-About
------
+      This is a public beta test version. You may use it to create
+      your own game, but please take note: we may change
+      specifications at any time during the beta phase, so anything
+      you make now may not necessarily work with later versions of
+      M.U.G.E.N.
 
-M.U.G.E.N is a 2D fighting game engine with many customizable
-components.
+      Not all docs are complete yet. Please check mugenfaq.txt for
+      answers to common problems and questions.
 
-Please visit our forums at elecbyte.com for support, bug reports and
-other useful resources.
+      This distribution includes a sample character Kung Fu Man. You
+      can check his movelist in the readme file in his directory:
+        chars/kfm/
 
-This distribution includes a sample character Kung Fu Man. You
-can check his movelist in the readme file in his directory:
-  chars/kfm/
+      --------------------------------------------------------------
+      UPDATE NOTICE: 
+           - MUGEN has moved from DOS to Linux! Please see the Known
+	     Issues / Notes section below for other important
+	     information.
+
+           - Some configuration files, such as data/mugen.cfg and 
+             data/select.def, may have had new parameters added to them.
+             Please overwrite your existing files if you have an older
+             version of MUGEN.
+             We recommend you do a clean install as there may be
+             files and directories in previous version that are now
+             no longer used.
+      --------------------------------------------------------------
 
 
 
 Updates
 -------
-
-See history.html for updates.
+Please check updates.txt for updates.
+Please check incompt2.txt for incompatibility notices regarding
+characters made for MUGEN version 2000.01.01 and earlier.
 
 
 
 Contents
 --------
-
-I.      M.U.G.E.N Info
+I.      MUGEN Info
 II.     Key Configuration
 III.    Running the Game
 IV.     Game HotKeys
 V.      Speed Issues
 VI.     Memory Issues
 VII.    Known Issues / Notes
-VIII.   Sample Content
 A.      License Agreement
-B.      Acknowledgements
+B.      Disclaimer
+C.      Thanks
 
 
 =====================================================================
-I. M.U.G.E.N Info
+I. MUGEN Info
 =====================================================================
 
-M.U.G.E.N may be used free-of-charge for non-commercial purposes.
-For other uses, please contact us.  Refer to Appendix A for the full
-license text.
+Please carefully read the license agreement in Appendix A before
+using MUGEN.
+
+If you have any questions, please refer to mugenfaq.txt.
 
 
 System requirements
 -------------------
+Minimum: Pentium 90
+Recommended: Pentium 200
 
-Operating System: Microsoft Windows XP SP2 or newer required.
+M.U.G.E.N is not set up for maximum performance by default. See
+"Speed Issues" (section IV) for information on how to optimize
+this program for a slower computer.
+It is hard to state exact memory requirements, as it varies
+according to character and stage complexities. 32 MB should suffice,
+although 64 MB is probably much safer. Simultaneous team battle
+modes will require more memory, as it needs to load up more than
+two characters. For larger characters, more memory will be required.
 
-CPU: Intel Core Duo or equivalent recommended for HD resolutions.
 
-Memory: 512 MB or more (actual requirements may vary based on
-character and stage complexities).
+What MUGEN?
+-----------
+MUGEN is a 2D fighting game engine, but you probably knew that already.
+MUGEN is also an acroymn for something, but we forgot what it is. :)
+We created MUGEN not only to make a fighting game, but also to let 
+others create their own fighting games.  You can control almost every
+aspect of the engine to suit your tastes.  That's the primary goal of
+MUGEN.  Since this is a work in progress, there are many things that
+it can and cannot do, but here's a short list of some of the things
+you can do...
 
-
-What M.U.G.E.N?
----------------
-
-M.U.G.E.N is a 2D fighting game engine, originally released in 1999.
-M.U.G.E.N was originally designed for users to create games that
-matched the technology level of 2D fighters from the mid '90s.
-However, it quickly evolved to become highly customizable, allowing
-very fine control over each character's behavior.  In fact, there
-are custom games for M.U.G.E.N that don't behave like your typical 2D
-fighter.
-
-The majority of content created for M.U.G.E.N tend to be distributed
-as individual characters, stages or motifs (motifs are like themes,
-that control the look and feel of the game).  Assembling a game is as
-simple as downloading the content of your choice, and configuring
-M.U.G.E.N to know about it.
-
-M.U.G.E.N is designed to be used by people with little or no
-programming experience, but with some artistic talent and patience to
-learn.  Of course, having some programming background does give you a
-bit of a headstart.  However, if you are just looking to play with
-downloaded content, all you need to know is how to unzip files and
-edit a text file.
-
-M.U.G.E.N is also an acroymn for something, but we forgot
-what it is. :)
-
-Here's a sampling of features you can find in M.U.G.E.N:
 - Customizable title screen, character select screen, life and power
-  bars, game sound effects, fonts and more.
+  bars, game sound effects, fonts and more
 - Characters can have any number of sounds and sprites of any size
-  limited by your computer's memory.
-- Choose from multiple resolutions, ranging from 320x240 up to full
-  HD at 1920x1080.
-- Cutscenes.
+  limited by your computer's memory
+- Up to 12 different color schemes for each character
+- Background music can be mp3, mod, midi or CD audio
+- Supports keyboard, joystick and Playstation joypads (through the use
+  of a converter).
 
 Game Engine
-- Use up to 7 buttons for a character.
-- Regular moves, special moves, super moves, etc.
-- Projectiles and special effects.
-- Move cancels and combos, multi-part moves and throws.
-- What your character can do is defined by a scripting language (and
-  your imagination).
+- Use up to 6 buttons for a character (7 if you count the Start button)
+- Regular moves/Special moves/Supers
+- Projectiles
+- Multiple air jumps
+- Move cancel/2-in-1 or whatever you want to call it
+- Multi-part moves/throws
+- What your character can do is defined by how you build his
+  state machine
 
 
-How M.U.G.E.N?
---------------
-
-M.U.G.E.N was originally developed for DOS in C using DJGPP and
-Allegro, an excellent compiler and gaming library respectively.
-Today, M.U.G.E.N is built for Microsoft Windows using Visual Studio
-Express and SDL.
+How MUGEN?
+----------
+MUGEN is being developed in C using Allegro.  It is being compiled
+with gcc 2.95.2 and linked with Allegro 4.0.0.
 
 
-Where M.U.G.E.N?
-----------------
+Where MUGEN?
+------------
+http://mugen.elecbyte.com
 
-http://elecbyte.com/mugen
 
-
-Why M.U.G.E.N?
---------------
-
+Why MUGEN?
+----------
 To tell you the truth, we were making a shooting game and all of a
 sudden it turned into this.  Although we were making a shooting game
 in the beginning, we noticed that there weren't any good commercial
-fighting games on the PC at the time.  Some of the inspiration came
-from early engines like SFIBM.
+fighting games on the PC.
 
 
-Who M.U.G.E.N?
---------------
-
-If you want to contact us about something, please use the contact
-form on our website.
-http://elecbyte.com/
+Who MUGEN?
+----------
+If you want to contact us about something, please visit
+http://www.elecbyte.com/contact.html
 
 
-When M.U.G.E.N?
----------------
-
-I don't quite remember when we started this project, but it was
-sometime around 1997 or 1998.  Our first public release version was
-9X.06.27.
+When MUGEN?
+-----------
+I don't quite remember when we started this project.
+Our first public release version was 9X.06.27.
 
 
 
@@ -159,22 +156,24 @@ options menu when you run the game.
 
 Button      Player 1      Player 2
 ------      --------      --------
-  Up        Up arrow      W
- Down       Down arrow    S
- Left       Left arrow    A
-Right       Right arrow   D
-  X         L             R
-  Y         semicolon     T
-  Z         double-quote  Y
-  A         comma         F
-  B         period        G
-  C         slash         H
-Start       Enter         U
+  Up        Up arrow      Numpad Up
+ Down       Down arrow    Numpad Down
+ Left       Left arrow    Numpad Left
+Right       Right arrow   Numpad Right
+  X         L             Numlock 
+  Y         semicolon     Numpad slash
+  Z         double-quote  Numpad asterisk
+  A         comma         Numpad -
+  B         period        Numpad +
+  C         slash         Numpad Enter
+Start       Enter         Numpad PgDn
 
 If you have a joystick, you can enable it through the options screen.
 Press F1 to access Input Config and set up your joystick from there.
-Press left/right on the joystick type option to enable or disable
-the joystick for each player.
+Scroll left/right on the joystick type option to pick your joystick
+type. If MUGEN is unable to detect your joystick, its name will be
+shown in grey. You can also set the joystick type from the [Input]
+group in data/mugen.cfg.
 
 
 
@@ -182,21 +181,23 @@ the joystick for each player.
 III. Running the Game
 =====================================================================
 
-From Explorer, double-click mugen.exe to start.
+At a Linux console, type "./mugen" to begin.
 
-Main menu        Function
----------        --------
-Arcade           Go 1 on 1 against the computer
-Versus           Go 1 on 1 against your friend
-Team Arcade      Play various team-up modes against the computer
-Team Versus      Play various team-up modes against your friend
-Team Co-op       Gang up against the computer with your friend
-Survival         See how long you can last in an endless battle!
-Survival Co-op   Play survival mode with your friend as a partner
-Training         Try out moves and combos
-Watch            Watch AI-controlled characters fight
-Options          Set up basic game options
-Exit             Quit from M.U.G.E.N
+M.U.G.E.N can run under console and X-Windows.
+
+Main menu:
+----------
+Arcade         - Go 1 on 1 against the computer
+Versus         - Go 1 on 1 against your friend
+Team Arcade    - Play various team-up modes against the computer
+Team Versus    - Play various team-up modes against your friend
+Team Co-op     - Gang up against the computer with your friend
+Survival       - See how long you can last in an endless battle!
+Survival Co-op - Play survival mode with your friend as a partner
+Training       - Try out moves and combos
+Watch          - Watch AI-controlled characters fight
+Options        - Set up basic game options
+Exit           - Returns you to the DOS prompt
 
 For "Arcade" mode, the key you hit will determine which side you play
 on. If you chose with one of Player One's keys, your character will
@@ -225,7 +226,7 @@ team mode.
 In Survival mode, there is an endless stream of opponents. The
 objective is to beat as many opponents as possible. The game is over
 when your team gets KOed. You can choose to play alone or in a team.
-Single player mode gives you highest life points and healing (when you
+Single player mode gives you highest hit points and healing (when you
 win a round). The more players you have on your team, the less damage
 each player can take, and the less each healing you get after each
 round.
@@ -236,7 +237,6 @@ Player One's side, then do the same for Player Two.
 
 Switching order in Turns mode
 -----------------------------
-
 When you are playing Turns team mode, you can change your team order
 during one of these situations:
 
@@ -269,24 +269,17 @@ Command-line arguments
 M.U.G.E.N accepts optional command-line parameters for Quick-VS mode.
 
 The format is (optional parameters are enclosed in square brackets):
-
   ./mugen [player1 player2 [-s stage]]
 
 For example, to start quick versus between players named KFM and
 Suave, you can type:
-
   ./mugen kfm suave
-
 To play the same two characters in a stage named TEMPLE, type:
-
   ./mugen kfm suave -s temple
-
 You can specify alternate .def files for your character:
-
   ./mugen kfm/newkfm.def suave -s temple
 
 Here are other useful command-line options:
-
  -h            Displays help
  -r <sysfile>  Loads a motif (more information below)
  -p3 <pname>   Loads a character named pname as player3
@@ -294,7 +287,6 @@ Here are other useful command-line options:
  -s <sname>    Loads a stage named sname.def in stages/
 
 For a full list of command-line options, type:
-
   ./mugen -h
 
 
@@ -303,11 +295,10 @@ Using motifs
 
 A motif is a custom configuration of the graphics and sounds
 used in the game's interface, as well as other things such
-as the character roster. The base motif is found in the
+as the character roster. The default motif is found in the
 data/ directory. Custom motifs are placed as subdirectories
 under data/. For example, the "kfm" motif is placed in
 data/kfm/, and to use it you would type:
-
   ./mugen -r kfm
 
 Here's what a motif covers (and which files each is in):
@@ -315,10 +306,9 @@ Here's what a motif covers (and which files each is in):
 - title screen graphics, sounds and music (system.def)
 - character screen graphics, sounds and music (system.def)
 - versus screen graphics and music (system.def)
-- victory screen graphics, sounds and music (system.def)
 - option screen graphics, sound and music (system.def)
 - filenames of storyboards (logo, intro, credits, etc) (system.def)
-- the actual storyboard files
+- storyboard files (filenames specified in system.def)
 - fight demo options (system.def)
 - continue/game over options (system.def)
 - fight screen graphics and sounds (fight.def)
@@ -327,12 +317,6 @@ Here's what a motif covers (and which files each is in):
 
 To set the default motif, edit data/mugen.cfg with
 a text editor, and change "motif" under [Options].
-
-To install a downloaded motif, first unzip the file into a
-new directory.  Open that directory to see if there are files
-in it; if so, move that directory into M.U.G.E.N's data/
-directory.  If there is a single directory instead, move that
-bottom-level directory into the data/ directory.
 
 To make your own motif, create a subdirectory under
 data/ with the name of your motif, and copy system.def
@@ -344,17 +328,15 @@ to the one in the data/ directory, so if you did not
 copy select.def over, data/select.def will be used
 when you run with your motif selected.
 
-Sample motifs are included: 
-mugen1 - A motif designed for 1280x720 resolution.  This is the
-         default motif.
-big    - Gives you many spaces to put characters.
-kfm    - The Kung Fu Man game motif.
+Two sample motifs are included: 
+"big" - gives you many spaces to put characters
+"kfm" - the Kung Fu Man game motif
 
 
 Training Menu
 -------------
 
-A training menu is available in Training mode. You can choose menu
+A training menu has been added to Training mode. You can choose menu
 items with your directional keys and exit Pause Mode by pressing
 any attack key or Pause. The following options are available:
 
@@ -401,8 +383,7 @@ Pause     Toggle pause
 ScrollLck Frame-step within pause
 Esc       Quit
 
-The following hotkeys are for debugging purposes and can be disabled
-by setting AllowDebugKeys = 0 in mugen.cfg.
+The following hotkeys are for debugging purposes.
 
 Key       Function
 ---       --------
@@ -437,41 +418,56 @@ If you find this runs slowly on your machine, there are several
 things you can do to improve its performance. You can change these
 options in data/mugen.cfg.
 
-Close other applications
-  Closing other CPU or memory-intensive applications may speed up
-  M.U.G.E.N.
+i. Use the most efficient video mode
+   Running in a window can be slow. Try running in fullscreen. 
+   Look under [Video Linux] in data/mugen.cfg. Also, running MUGEN as
+   root may improve video performance.
 
-Use the most efficient video mode
-  Running in a window can be slow on some systens. Try running in
-  fullscreen. Set FullScreen = 1 in mugen.cfg.
+ii. Select the correct resolution
+   M.U.G.E.N is meant to run under 320x240 in 16-bit colour.
+   Anything larger or in a different bit depth may decrease the
+   speed.
 
-Set a smaller resolution
-  Try 640x480 or 640x360 if MUGEN is running too slowly in HD
-  resolutions.
+iii. Turn off stretching
+   If you find you cannot run in 320x240, you can choose 640x480
+   and keep the "stretch" option off.
 
-Turn off shadows
-  You can turn shadows off to speed up drawing. Look in 
-  data/mugen.cfg and set the "DrawShadows" option under [Config]
-  to 0.
+iv. Turn off shadows
+   You can turn shadows off to speed up drawing. Look in 
+   data/mugen.cfg and set the "DrawShadows" option under [Config]
+   to 0.
 
-Use frameskip
-  Auto-frameskip is enabled by default. The game will not draw
-  some frames in case the computer is not fast enough, and this
-  helps maintain a constant game speed.
-  If you'd like to run at a constant framerate, you can hit Ctrl-F
-  repeatedly to adjust the frameskip. It will switch from "auto"
-  to "skip none" to "skip 1" to "skip 2" and then back to "auto".
-  This works only when you are in the fight screen.
+v. Turn off sound or music
+   Playing music during the game takes up CPU power. This is true
+   especially for MP3s. To turn off the background music, open
+   data/mugen.cfg and set "PlayMIDI" and "PlayMP3" to 0.
+   To turn off all sounds and music, set "Sound" to 0. You can
+   also use the -nosound command line option to disable sounds,
+   or the -nomusic option to disable music only.
 
-Free up memory
-  Memory may be swapped to the hard disk when you run low, and
-  this will severely impact performance. See the next section
-  on how to reduce memory usage.
+vi. Disable your joystick
+   Some joysticks may cause slowdown in M.U.G.E.N. You can disable
+   your joystick in the Options menu from within the game, or run
+   with the -nojoy option.
 
-Disable precaching
-  If you find the game slows down too much when loading in the
-  background, you can disable precaching. This will increase
-  load times, however. Under [Misc], set precache = 0.
+vii. Use frameskip
+   Auto-frameskip is enabled by default. The game will not draw
+   some frames in case the computer is not fast enough, and this
+   helps maintain a constant game speed.
+   If you'd like to run at a constant framerate, you can hit Ctrl-F
+   repeatedly to adjust the frameskip. It will switch from "auto"
+   to "skip none" to "skip 1" to "skip 2" and then back to "auto".
+   This works only when you are in the fight screen.
+
+viii. Free up memory
+   Memory may be swapped to the hard disk when you run low, and
+   this will severely impact performance. See the next section
+   on how to reduce memory usage.
+
+ix. Disable precaching
+   If you find the game slows down too much when loading in the
+   background, you can disable precaching. This will increase
+   load times, however. Under [Misc], set precache to 0.
 
 
 
@@ -482,36 +478,39 @@ VI. Memory Issues
 If you find the program exiting or running slowly because you don't
 have enough memory, here are some solutions:
 
-Reduce the player cache
-  M.U.G.E.N will try to keep players in memory in order to reduce
-  loading times. You might want to reduce the number of players
-  that are kept in memory at any one time.
-  Open up data/mugen.cfg and look under the [Misc] section.
-  Change PlayerCache to a smaller number. 0 will save you the
-  most memory.
+i. Reduce the player cache
+   M.U.G.E.N will try to keep players in memory in order to reduce
+   loading times. You might want to reduce the number of players
+   that are kept in memory at any one time.
+   Open up data/mugen.cfg and look under the [Misc] section.
+   Change PlayerCache to a smaller number. 0 will save you the
+   most memory.
 
-Reduce the number of characters
-  Having a large number of characters can consume a substantial
-  amount of memory. You can split your character roster up between
-  multiple motifs. See "Using Motifs" in this readme file.
+ii. Reduce the number of characters
+   Having a large number of characters can consume a substantial
+   amount of memory. You can split your character roster up between
+   multiple motifs. See "Using Motifs" in this readme file.
 
-Disable buffered read
+iii. Turn off sound or music
+   You can save some memory by disabling sound and music. See part
+   v. under "Speed Issues".
+
+iv. Disable buffered read
    You can save memory while loading characters by turning this
    option off. It is found under the [Misc] section, and called
    "BufferedRead". Loading times will increase as a result.
 
-Reduce effects and limits
-  Set the options under [Config] to a smaller numbers (see mugen.cfg
-  for descriptions). Reducing HelperMax gives the most savings.
+v. Reduce effects and limits
+   Set the options under [Config] to a smaller numbers (see mugen.cfg
+   for descriptions). Reducing HelperMax gives the most savings.
 
-Enable system file unload
-  Set UnloadSystem under [Misc] to 1.
+vi. Enable system file unload
+   Set UnloadSystem under [Misc] to 1.
 
-Optimize your sprite files
-  When you generate a sprite file, enable settings such as
-  sprite.autocrop and sprite.detectduplicates.  If your sprites
-  use 32 colors or less consider using lz5 compression (see 
-  work/kfm/kfm-sff-optimized.def).
+vii. Optimize your sprite files
+   When you generate a sprite file, run sprmaker with the -c -f -p
+   command line options. This generates the smallest possible sprite
+   file.
 
 
 
@@ -519,42 +518,39 @@ Optimize your sprite files
 VII. Known Issues / Notes
 =====================================================================
 
-An up-to-date known issues list is maintained on in our forum.
-http://elecbyte.com/forum/
+General
+-------
+- Linux version is new. There are several known problems at this time:
+  - depth in mugen.cfg must match depth when in X
+  - console must use same res and depth as screen. Not allowed to switch
+    res/depth in console (unless root)
+  - be careful of filename case sensitivity and \ and / in files.
+  - multi-joystick and sound do work, but linux must be set up correctly
+    first
+  - linux sound uses esd or /dev/dsp, but 2.4.X kernels have changed to
+    /dev/sound/dsp
+  - cannot disable key repeat in X. You can make a script to run mugen:
+      xset r off    (disable)
+      ./mugen
+      xset r on     (enable)
+
+- Storyboards lack text and sound options
 
 
+Players
+-------
+- No support for multiple palettes in players
 
-=====================================================================
-VIII. Sample Content
-=====================================================================
+- Helpers used as projectile replacements do not have all the desired
+  properties of a projectile
 
+- Collision boxes in helpers inherit parent's scale, regardless of own
+  scale
 
-Sample content included in this distribution are:
+- HitOverride controller always prevents player from being hit by
+  attacks with a HitDef p2stateno parameter
 
-Content                   Location
--------                   --------
-Base motif                data/
-"mugen1" HD motif         data/mugen1
-KFM "classic" character   chars/kfm
-KFM character             chars/kfm720
-Fonts                     font/
-Mountain temple stage     stages/kfm.def, stages/kfm.sff
-Training room stage       stages/stage0.def, stages/stage0.sff
-Training room HD stage    stages/stage0-720.def, stages/stage0-720.sff
-Work files                work/
-
-
-All the sample content is licensed under the Creative Commons
-Noncommercial License, with optional attribution.
-
-Basically, it means you don't need our permission to build upon or
-use parts of any of that content for non-commercial purposes.  In
-fact, we encourage you to use the sample content as a starting point
-for your projects and replacing the graphics, sounds and behaviors.
-Feel free to contact us if you have any questions.
-
-More info about the CC License here:
-http://creativecommons.org/licenses/by-nc/3.0/
+- Stick-around helpers and explods get removed during intro skip
 
 
 
@@ -562,79 +558,50 @@ http://creativecommons.org/licenses/by-nc/3.0/
 A. License Agreement
 =====================================================================
 
+By using MUGEN beta 2002.04.14, you agree to the following terms and
+conditions of use:
 
-By using M.U.G.E.N, you agree to the terms and conditions of this
-license.
+1. MUGEN version 2002.04.14 is beta software. You agree to indemnify
+Elecbyte from liability for any damage incurred to any computer
+hardware, software, or other property, as well as from any injury
+incurred to your person or others, through use of this software.
+Elecbyte shall not be held responsible for any failure of MUGEN
+2002.04.14 to operate properly, whether through deficiencies of the
+software or through user error. Elecbyte disclaims all express and
+implied warranties, including but not limited to warranties of
+merchantability and fitness for a particular purpose.
 
-This license applies to the M.U.G.E.N Environment, defined as the
-M.U.G.E.N executable, and other associated data files provided by
-Elecbyte that are necessary for proper operation of the executable.
+2. The MUGEN environment, defined as any or all of the 2002.04.14
+executable, documentation, sample character and stage files,
+configuration files, and other associated data files provided by
+Elecbyte and necessary for proper operation of the executable, is
+copyrighted by Elecbyte and may not be redistributed in whole or in
+part, altered or unaltered, without Elecbyte's express written
+permission. Only the following files are exempt from this
+restriction, and may be freely distributed and/or altered: all files
+in the data/ directory, all files in the chars/kfm/ directory, 
+stages/kfm.def and stages/kfm.sff.
 
+3. Elecbyte places no restrictions on distribution of character files,
+stage files, add-on packs, or similar items which operate under the
+MUGEN 2002.04.14 environment, as long as said distribution is pursuant
+to the conditions of paragraph 2. All applicable laws governing such
+distribution remain in force.  You agree to indemnify Elecbyte from any
+legal liability for your use, or distribution, of such files.
 
-Usage
+4. Agreement to this license grants you the right to use the MUGEN
+environment, version 2002.04.14, until and not beyond 12:01 AM
+(Greenwich Mean Time) on June 1, 2002. After this time, Elecbyte may,
+at its sole discretion, choose to offer, or not to offer, a new public
+license. If a new license is offered, its terms shall govern any
+continued use of the MUGEN 2002.04.14 beta. If no new license is
+offered, all use of the 2002.04.14 beta must cease.
 
-Under this license, permission is granted to use the M.U.G.E.N
-Environment free of charge for non-commercial purposes.
-
-
-Redistribution
-
-Elecbyte provides a M.U.G.E.N redistributable package, containing a
-minimal M.U.G.E.N Environment, that may be included with third party
-content for redistribution. Such Works based on the M.U.G.E.N
-Environment may be used and distributed, subject to the following:
-
-i. Works containing the M.U.G.E.N Environment must be provided free
-of charge and under the terms of this license.
-
-ii. Works containing the M.U.G.E.N Environment must include an
-unmodified copy of this license, as well as any other licenses
-bundled with the M.U.G.E.N Environment.
-
-iii. Works containing the M.U.G.E.N Environment must be plainly marked
-as a such.
-
-iv. You agree to indemnify Elecbyte from any legal liability for your
-use, or distribution, of such Works.
-
-Please note that Elecbyte places no restrictions on the distribution
-of character files, stage files, add-on packs, or similar items which
-operate under the M.U.G.E.N Environment, that do not contain any
-significant portion of the M.U.G.E.N Environment itself.
-
-
-Restrictions
-
-This license is subject to the following restrictions:
-
-1. The M.U.G.E.N Environment is copyrighted by Elecbyte and may not
-be used for commercial purposes in whole or in part, altered or
-unaltered, without Elecbyte's express written permission.
-
-2. All distributions of the M.U.G.E.N Environment must retain a copy
-of this license.
-
-3. The M.U.G.E.N executable must not be modified for use or
-redistribution.
-
-
-Limitations
-
-I. You agree to indemnify Elecbyte from liability for any damage
-incurred to any computer hardware, software, or other property, as
-well as from any injury incurred to your person or others, through
-use of this software.  Elecbyte shall not be held responsible for any
-failure of M.U.G.E.N and its associated tools to operate properly,
-whether through deficiencies of the software or through user error.
-Elecbyte disclaims all express and implied warranties, including but
-not limited to warranties of merchantability and fitness for a
-particular purpose.
-
-II. Failure by Elecbyte to enforce any of the terms of this agreement
+5. Failure by Elecbyte to enforce any of the terms of this agreement
 shall not constitute forfeiture of Elecbyte's right to enforce said
 terms.
 
-III. In the event of an inconsistency between this license agreement and
+6. In the event of an inconsistency between this license agreement and
 other Elecbyte documents, the terms of this license agreement shall
 prevail, subject only to possible supersession by subsequent license
 agreements. If any of the terms of this license agreement conflict with
@@ -642,27 +609,33 @@ the laws in your locale, the conflicting terms will be rendered null and
 void. The remainder of this agreement shall still obtain.
 
 
-Sample Content
 
-Please note that the sample content included with the full M.U.G.E.N
-package is not part of the M.U.G.E.N Environment, and is under a
-separate license, the Creative Commons Noncommercial License, with
-optional attribution.
-http://creativecommons.org/licenses/by-nc/3.0/
+=====================================================================
+B. Disclaimer
+=====================================================================
+
+Elecbyte will not be held liable for any damages to either the user
+or the system it is run on, that may occur as a direct or indirect
+result of the use of MUGEN and its associated tools. Elecbyte holds
+no responsibility for the actions of the user, including but not
+limited to the user's infringement on the intellectual rights of
+others.
 
 
 
 =====================================================================
-B. Acknowledgements
+C. Thanks
 =====================================================================
 
-Thanks to:
-- All our beta testers.
-- Everyone who contributed to us in any way.
-- All of you who gave feedback to us.
-- Everyone responsible for the software libraries we used:
-  Allegro, FreeType Project, GLEW, libogg, libpng, SDL, SDL_gfx,
-  SDL_image, SDL_mixer, SDL_ttf, SMPEG, zlib.  Also everyone
-  reponsible for the other libraries we used in the older versions.
+DJ Delorie - For DJGPP
+Shawn Hargreaves and many others - For Allegro
+Tomislav Uzelac and Ove Kaaven - For LibAmp, and its Allegro port
+Guan Foo Wah - For JGMOD
+Peter Wang, Brennan Underwood and friends - For libcda
+Earle F. Philhower, III - For DirectPad Pro converter schematics
+David Cornish - For SFX Maker, to make the self-extractable archive
+All our beta testers
+Everyone who contributed to us in any way
+All of you who gave feedback to us
 
 If we forgot to mention someone, please let us know!

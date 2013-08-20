@@ -1,17 +1,16 @@
-﻿; Definition of fight screen
+; Definition of fight screen
 
 ; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
 ; To customize, make a copy of this file in a subdirectory of your
 ; motif's name. See readme.txt for details on motifs.
 
+; *2001.11.01 NEW* symbolizes any new parameters added for the 2001.11.01
+; version of M.U.G.E.N.
+
 ; Notes about fonts:
-;   - up to 10 fonts can be specified in the [Files] section.
-;   - fonts indexed here do not refer to the ones in system.def
-;   - fonts are search in directories in the following order:
-;     1. system directory
-;     2. mugen program directory (not recommended to keep custom fonts here)
-;     3. data/ (not recommended to keep custom fonts here)
-;     4. font/
+;   - do not index fonts greater than 9 (crash)
+;   - fonts indexed here do not refer to the ones in
+;     system.def
 ;
 ; See the section "How to Customize" at the end of
 ; this file.
@@ -25,16 +24,12 @@
 [Files]
 sff = fight.sff
 snd = fight.snd
-font1 = jg.fnt
-font2 = num1.fnt
-font3 = name1.fnt
+font1 = font/jg.fnt
+font2 = font/num1.fnt
+font3 = font/name1.fnt
 fightfx.sff = fightfx.sff
 fightfx.air = fightfx.air
 common.snd = common.snd
-
-;-----------------------------------------------------------
-[FightFx]
-scale = 1
 
 ;-----------------------------------------------------------
 [Lifebar]
@@ -273,22 +268,14 @@ framespercount = 60
 
 ;-----------------------------------------------------------
 [Combo]
-team1.pos = 10,80         ;Coords to show
-team1.start.x = -40       ;Starting x-coords
-team1.counter.font = 2,4,1
-team1.counter.shake = 1   ;Set to 1 to shake count on hit
-team1.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
-team1.text.font = 1,0,1
-team1.text.offset = 3,0   ;Offset of text
-team1.displaytime = 90    ;Time to show text
-team2.pos = 309,80         ;Coords to show
-team2.start.x = 359       ;Starting x-coords
-team2.counter.font = 2,4,-1
-team2.counter.shake = 1   ;Set to 1 to shake count on hit
-team2.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
-team2.text.font = 1,0,-1
-team2.text.offset = 3,0   ;Offset of text
-team2.displaytime = 90    ;Time to show text
+pos = 10,80         ;Coords to show
+start.x = -40       ;Starting x-coords
+counter.font = 2,4
+counter.shake = 1   ;Set to 1 to shake count on hit
+text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
+text.font = 1,0
+text.offset = 3,0   ;Offset of text
+displaytime = 90    ;Time to show text
 
 ;-----------------------------------------------------------
 [Round]
@@ -490,7 +477,7 @@ useiconupto = 4
 ;      p1.throw.spr = 103,0
 ;
 ; 3. font
-;    Format: font = fontno, fontbank, alignmnt, R, G, B
+;    Format: font = fontno, fontbank, alignmt
 ;            text = text
 ;    This lets you set the font (and optionally the content
 ;    text). fontno is the number of the font defined under
@@ -500,11 +487,6 @@ useiconupto = 4
 ;    the font for what color banks it has.
 ;    alignmt is a number representing the text alignment.
 ;    1 is left, 0 means center, and -1 is for right-alignment.
-;    R, G, B are the color adjustment values for the font.
-;    RGB values default to 256,256,256 (no color adjustment).
-;    All font values are optional.  If fontno is omitted, no
-;    text will be drawn.
-;
 ;    The "text" element should accompany the "font" element
 ;    wherever necessary. The following example will display
 ;    "FIGHT!" using font 1, bank 1, with center-alignment.
