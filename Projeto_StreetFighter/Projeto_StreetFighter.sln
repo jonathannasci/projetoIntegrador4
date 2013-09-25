@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_StreetFighter", "Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter.csproj", "{F9DB8362-5475-4E9B-BF6B-20DF78317F11}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Projeto_StreetFighterContent", "Projeto_StreetFighter\Projeto_StreetFighterContent\Projeto_StreetFighterContent.contentproj", "{D77A9636-BB55-4767-B79B-C6604FFABD9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9DB8362-5475-4E9B-BF6B-20DF78317F11}.Debug|x86.ActiveCfg = Debug|x86
+		{F9DB8362-5475-4E9B-BF6B-20DF78317F11}.Debug|x86.Build.0 = Debug|x86
+		{F9DB8362-5475-4E9B-BF6B-20DF78317F11}.Release|x86.ActiveCfg = Release|x86
+		{F9DB8362-5475-4E9B-BF6B-20DF78317F11}.Release|x86.Build.0 = Release|x86
+		{D77A9636-BB55-4767-B79B-C6604FFABD9A}.Debug|x86.ActiveCfg = Debug|x86
+		{D77A9636-BB55-4767-B79B-C6604FFABD9A}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
