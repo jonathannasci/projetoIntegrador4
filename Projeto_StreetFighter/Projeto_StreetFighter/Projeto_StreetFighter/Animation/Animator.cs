@@ -14,7 +14,7 @@ namespace Projeto_StreetFighter.Animation
 
         public int X, Y, Width, Height;
 
-        public Game1.CurrentWindow window;
+        public Game1.Variables.CurrentWindow window;
 
         public int time_counter;
         public int speedInMilliSecs;
@@ -34,7 +34,7 @@ namespace Projeto_StreetFighter.Animation
 
         public void Draw(SpriteBatch sprite)
         {
-            if (Game1.currentWindow != window)
+            if (Game1.Variables.currentWindow != window)
                 return;
 
             sprite.Draw(textures_array[current_freme_index], new Rectangle(X, Y, Width, Height), Color.White);

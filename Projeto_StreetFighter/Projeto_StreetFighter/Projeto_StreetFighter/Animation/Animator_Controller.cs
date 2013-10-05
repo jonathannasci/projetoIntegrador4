@@ -12,7 +12,7 @@ namespace Projeto_StreetFighter.Animation
         private static List<Animator> Animator_List = new List<Animator>();
 
         public static Animator AddAnimator(List<Texture2D> texture_list,
-            int x, int y, int width, int height, Game1.CurrentWindow window_related,
+            int x, int y, int width, int height, Game1.Variables.CurrentWindow window_related,
             int speed_millisecs)
         {
             Animator anim = new Animator();

@@ -14,10 +14,22 @@ namespace Projeto_StreetFighter
 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        public enum CurrentWindow { SplashScreen, Menu, Game }
-        public static CurrentWindow currentWindow = CurrentWindow.SplashScreen;
+        
+        public struct Variables
+        {
+            public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 1024, 760);
 
-        public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 1024, 760);
+            public enum CurrentWindow { SplashScreen, Menu, Game }
+            public static CurrentWindow currentWindow = CurrentWindow.SplashScreen;
+
+            public struct Input
+            {
+                public static KeyboardState Prev_Key, New_Key;
+                public static MouseState Prev_Mouse, New_Mouse;
+            }
+        }
+
+        
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -27,8 +39,8 @@ namespace Projeto_StreetFighter
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = ResolucaoRectangle.Width;
-            graphics.PreferredBackBufferHeight = ResolucaoRectangle.Height;
+            graphics.PreferredBackBufferWidth =  Variables.ResolucaoRectangle.Width;
+            graphics.PreferredBackBufferHeight = Variables.ResolucaoRectangle.Height;
             graphics.ApplyChanges();
         }
 
@@ -55,9 +67,9 @@ namespace Projeto_StreetFighter
             }
 
             Animation.Animator_Controller.AddAnimator(
-                Menu.SplashScreen.Textures_array, 0, 0, 
-                ResolucaoRectangle.Width, ResolucaoRectangle.Height, 
-                CurrentWindow.SplashScreen,100);
+                Menu.SplashScreen.Textures_array, 0, 0,
+                Variables.ResolucaoRectangle.Width, Variables.ResolucaoRectangle.Height,
+                Variables.CurrentWindow.SplashScreen, 100);
             
         }
 
@@ -71,7 +83,16 @@ namespace Projeto_StreetFighter
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            //get the input
+            Variables.Input.Prev_Key = Variables.Input.New_Key;
+            Variables.Input.New_Key = Keyboard.GetState();
+
+            Variables.Input.Prev_Mouse = Variables.Input.New_Mouse;
+            Variables.Input.New_Mouse = Mouse.GetState();
+
             Animation.Animator_Controller.UpdateAll(gameTime);
+
+            Menu.SplashScreen.Update(Variables.Input.New_Key);
 
             base.Update(gameTime);
         }
