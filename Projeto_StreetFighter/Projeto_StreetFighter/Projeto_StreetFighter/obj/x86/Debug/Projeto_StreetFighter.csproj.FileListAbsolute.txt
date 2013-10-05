@@ -4,3 +4,11 @@ D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_Stre
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Debug\Projeto_StreetFighter.exe
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Debug\Projeto_StreetFighter.pdb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_00.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_01.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_02.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_03.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_04.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_05.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_06.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ken\Ken_Normal.xnb
