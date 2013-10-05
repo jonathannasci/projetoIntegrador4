@@ -6,3 +6,9 @@ Content\Menu\Main_Menu_04.xnb
 Content\Menu\Main_Menu_05.xnb
 Content\Menu\Main_Menu_06.xnb
 Content\Characters\Ken\Ken_Normal.xnb
+Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.xnb
+Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.xnb
+Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.xnb
+Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.xnb
+Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.xnb
+Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.xnb

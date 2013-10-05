@@ -17,7 +17,7 @@ namespace Projeto_StreetFighter
         
         public struct Variables
         {
-            public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 1024, 760);
+            public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 800, 600);
 
             public enum CurrentWindow { SplashScreen, Menu, Game }
             public static CurrentWindow currentWindow = CurrentWindow.SplashScreen;
@@ -70,6 +70,11 @@ namespace Projeto_StreetFighter
                 Menu.SplashScreen.Textures_array, 0, 0,
                 Variables.ResolucaoRectangle.Width, Variables.ResolucaoRectangle.Height,
                 Variables.CurrentWindow.SplashScreen, 100);
+
+            Animation.Animator_Controller.AddAnimator(
+                Characters.Character.Textures.Normal_Instace.Textures_array, 200, 400, 
+                66, 98, 
+                Variables.CurrentWindow.Menu ,100);
             
         }
 

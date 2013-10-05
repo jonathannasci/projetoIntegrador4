@@ -73,6 +73,60 @@
       <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ken\Ken_Normal.xnb</Output>
       <Time>2013-09-28T14:39:07.9224167-03:00</Time>
     </Item>
+    <Item>
+      <Source>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.png</Source>
+      <Name>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.xnb</Output>
+      <Time>2013-10-04T22:34:45.6505641-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.png</Source>
+      <Name>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.xnb</Output>
+      <Time>2013-10-04T22:34:45.6505641-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.png</Source>
+      <Name>Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.xnb</Output>
+      <Time>2013-10-04T22:34:45.6505641-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.png</Source>
+      <Name>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.xnb</Output>
+      <Time>2013-10-04T23:05:53.9082971-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.png</Source>
+      <Name>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.xnb</Output>
+      <Time>2013-10-04T23:05:53.9233021-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.png</Source>
+      <Name>Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.xnb</Output>
+      <Time>2013-10-04T23:05:53.9233021-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{D77A9636-BB55-4767-B79B-C6604FFABD9A}</ContentProjectGUID>

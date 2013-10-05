@@ -12,3 +12,9 @@ D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_Stre
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_05.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Menu\Main_Menu_06.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ken\Ken_Normal.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.xnb

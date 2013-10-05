@@ -74,6 +74,40 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.png">
+      <Name>Ryu_Soco_Forte_N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.png">
+      <Name>Ryu_Soco_Forte_N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.png">
+      <Name>Ryu_Soco_Forte_N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.png">
+      <Name>Ryu_Chute_Forte_N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.png">
+      <Name>Ryu_Chute_Forte_N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.png">
+      <Name>Ryu_Chute_Forte_N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
