@@ -17,15 +17,32 @@ namespace Projeto_StreetFighter
         
         public struct Variables
         {
-            public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 800, 600);
+            public static bool Exit = false;
 
-            public enum CurrentWindow { SplashScreen, Menu, Game }
-            public static CurrentWindow currentWindow = CurrentWindow.SplashScreen;
+            public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 1024, 768);
+
+            public static Rectangle GameRectangle = new Rectangle(
+                0, 0, ResolucaoRectangle.Width, ResolucaoRectangle.Height - 100);
+
+            public enum CurrentWindow { Menu, SelectPlayer, Load ,Game }
+            public static CurrentWindow currentWindow = CurrentWindow.Menu;
 
             public struct Input
             {
                 public static KeyboardState Prev_Key, New_Key;
                 public static MouseState Prev_Mouse, New_Mouse;
+            }
+
+            public struct CharacterSize
+            {
+                public static int Width = 200;
+                public static int Height = 200;
+            }
+
+            public struct FotoSize
+            {
+                public static int Width = 155;
+                public static int Height = 156;
             }
         }
 
@@ -47,7 +64,6 @@ namespace Projeto_StreetFighter
 
         protected override void Initialize()
         {
-            
             base.Initialize();
         }
 
@@ -55,29 +71,154 @@ namespace Projeto_StreetFighter
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            Other.Functions.LoadTextureFrame(
-                ref Characters.Character.Textures.Normal_Instace.Textures_array,
-                Content.Load<Texture2D>("Characters/Ken/Ken_Normal"));
+            //Other.Functions.LoadTextureFrame(
+            //    ref Characters.Character.Textures.Normal_Instance,
+            //    Content.Load<Texture2D>("Characters/Ken/Ken_Normal"));
+
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Normal/0" + i.ToString()));
+            //}
+
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Andando_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Andando/0" + i.ToString()));
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Chute_Forte_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Chute_Forte/N0" + i.ToString()));
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Chute_Fraco_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Chute_Fraco/N0" + i.ToString()));
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Soco_Forte_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Soco_Forte/N0" + i.ToString()));
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Other.Functions.LoadTextureFrame(
+            //        ref Characters.Character.Textures.Normal_Soco_Fraco_Instance,
+            //        Content.Load<Texture2D>("Characters/Ryu/Soco_Fraco/N0" + i.ToString()));
+            //}
 
             for (int i = 0; i < 4; i++)
             {
                 Other.Functions.LoadTextureFrame(
-                ref Menu.SplashScreen.Textures_array,
-                Content.Load<Texture2D>("Menu/Main_Menu_0" + i.ToString()));
+                ref Menu.MainMenu.Textures_Animation_Start,
+                Content.Load<Texture2D>("Menu/Start/0" + i.ToString()));
             }
 
-            Animation.Animator_Controller.AddAnimator(
-                Menu.SplashScreen.Textures_array, 0, 0,
-                Variables.ResolucaoRectangle.Width, Variables.ResolucaoRectangle.Height,
-                Variables.CurrentWindow.SplashScreen, 100);
+            for (int i = 0; i < 4; i++)
+            {
+                Other.Functions.LoadTextureFrame(
+                ref Menu.MainMenu.Textures_Animation_Quit,
+                Content.Load<Texture2D>("Menu/Quit/0" + i.ToString()));
+            }
 
-            Animation.Animator_Controller.AddAnimator(
-                Characters.Character.Textures.Normal_Instace.Textures_array, 200, 400, 
-                66, 98, 
-                Variables.CurrentWindow.Menu ,100);
+            
+
+            Menu.SelectMenu.Content = Content;
+
+            Players.Player_Manager.AddPlayer();
+            Players.Player_Manager.AddPlayer();
+
+            LoadOthersAnimation();
+            //LoadCharactersAnimation();
+
+            Menu.MainMenu.ShowSplashScreen();
+
+        }
+
+        public static void LoadOthersAnimation()
+        {
+            Animation.Animator_Controller.LoadAnimator(
+                Menu.MainMenu.Textures_Animation_Start, 0, 0,
+                Variables.ResolucaoRectangle.Width, Variables.ResolucaoRectangle.Height,
+                Variables.CurrentWindow.Menu,
+                100,
+                Animation.Animator_Controller.AnimationType.Normal_Reversed, null,
+                Players.Player_Manager.PlayerState.NULL,
+                Animation.Animator_Controller.OtherAnimation_enum.SplashScreen_Start);
+
+            Animation.Animator_Controller.LoadAnimator(
+                Menu.MainMenu.Textures_Animation_Quit, 0, 0,
+                Variables.ResolucaoRectangle.Width, Variables.ResolucaoRectangle.Height,
+                Variables.CurrentWindow.Menu,
+                100,
+                Animation.Animator_Controller.AnimationType.Normal_Reversed, null,
+                Players.Player_Manager.PlayerState.NULL,
+                Animation.Animator_Controller.OtherAnimation_enum.SplashScreen_Quit);
+
             
         }
 
+        //public static void LoadCharactersAnimation()
+        //{
+        //    Animation.Animator_Controller.LoadAnimator(
+        //            Characters.Character.Textures.Normal_Soco_Forte_Instance, 200, 400,
+        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //            Game1.Variables.CurrentWindow.Game, 90,
+        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
+        //            Players.Player_Manager.Player_Array[0],
+        //            Players.Player_Manager.PlayerState.Soco_Forte_N, IsGolpe: true);
+
+        //    Animation.Animator_Controller.LoadAnimator(
+        //            Characters.Character.Textures.Normal_Soco_Fraco_Instance, 200, 400,
+        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //            Game1.Variables.CurrentWindow.Game, 70,
+        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
+        //            Players.Player_Manager.Player_Array[0],
+        //            Players.Player_Manager.PlayerState.Soco_Fraco_N, IsGolpe: true);
+
+        //    Animation.Animator_Controller.LoadAnimator(
+        //            Characters.Character.Textures.Normal_Chute_Forte_Instance, 200, 400,
+        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //            Game1.Variables.CurrentWindow.Game, 90,
+        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
+        //            Players.Player_Manager.Player_Array[0],
+        //            Players.Player_Manager.PlayerState.Chute_Forte_N, IsGolpe: true);
+
+        //    Animation.Animator_Controller.LoadAnimator(
+        //            Characters.Character.Textures.Normal_Chute_Fraco_Instance, 200, 400,
+        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //            Game1.Variables.CurrentWindow.Game, 70,
+        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
+        //            Players.Player_Manager.Player_Array[0],
+        //            Players.Player_Manager.PlayerState.Chute_Fraco_N, IsGolpe: true);
+
+        //    Animation.Animator_Controller.LoadAnimator(
+        //            Characters.Character.Textures.Normal_Andando_Instance, 200, 400,
+        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //            Game1.Variables.CurrentWindow.Game, 110,
+        //            Animation.Animator_Controller.AnimationType.Normal,
+        //            Players.Player_Manager.Player_Array[0],
+        //            Players.Player_Manager.PlayerState.Andando);
+
+        //    Animation.Animator_Controller.LoadAnimator(
+        //        Characters.Character.Textures.Normal_Instance, 200, 400,
+        //        Variables.CharacterSize.Width, Variables.CharacterSize.Height,
+        //        Game1.Variables.CurrentWindow.Game, 120,
+        //        Animation.Animator_Controller.AnimationType.Normal_Reversed,
+        //        Players.Player_Manager.Player_Array[0],
+        //        Players.Player_Manager.PlayerState.Normal);
+        //}
 
         protected override void UnloadContent()
         {
@@ -85,7 +226,7 @@ namespace Projeto_StreetFighter
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Variables.Exit)
                 this.Exit();
 
             //get the input
@@ -97,7 +238,9 @@ namespace Projeto_StreetFighter
 
             Animation.Animator_Controller.UpdateAll(gameTime);
 
-            Menu.SplashScreen.Update(Variables.Input.New_Key);
+            Menu.MainMenu.Update(Variables.Input.New_Key);
+            Menu.SelectMenu.Update(Variables.Input.New_Key, gameTime);
+            Players.Player_Manager.Update(Variables.Input.Prev_Key, Variables.Input.New_Key, gameTime);
 
             base.Update(gameTime);
         }

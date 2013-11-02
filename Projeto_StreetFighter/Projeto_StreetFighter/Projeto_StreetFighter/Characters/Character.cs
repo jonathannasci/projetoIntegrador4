@@ -6,19 +6,25 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Projeto_StreetFighter.Characters
 {
-    abstract class Character
+    public class Character
     {
-        public enum CharacterStance { Normal_stance }
+        
+        public enum CharacterStance { Normal_stance, Baixo_stance, Alto_stance }
 
-        public struct Textures
-        {
-            public struct Normal_Instace
-            {
-                public static List<Texture2D> Textures_array = new List<Texture2D>();
-            }
+        //public struct Textures
+        //{
+            public List<Texture2D> Normal_Instance = new List<Texture2D>();
 
+            public List<Texture2D> Normal_Andando_Instance = new List<Texture2D>();
 
-        }
+            public List<Texture2D> Normal_Chute_Forte_Instance = new List<Texture2D>();
+
+            public List<Texture2D> Normal_Chute_Fraco_Instance = new List<Texture2D>();
+
+            public List<Texture2D> Normal_Soco_Forte_Instance = new List<Texture2D>();
+
+            public List<Texture2D> Normal_Soco_Fraco_Instance = new List<Texture2D>();
+        //}
 
 
     }

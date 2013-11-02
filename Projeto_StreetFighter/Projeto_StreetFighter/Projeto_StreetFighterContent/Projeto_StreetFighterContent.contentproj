@@ -30,44 +30,6 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\Main_Menu_00.png">
-      <Name>Main_Menu_00</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_01.png">
-      <Name>Main_Menu_01</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_02.png">
-      <Name>Main_Menu_02</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_03.png">
-      <Name>Main_Menu_03</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_04.png">
-      <Name>Main_Menu_04</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_05.png">
-      <Name>Main_Menu_05</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Menu\Main_Menu_06.png">
-      <Name>Main_Menu_06</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
     <Compile Include="Characters\Ken\Ken_Normal.png">
       <Name>Ken_Normal</Name>
       <Importer>TextureImporter</Importer>
@@ -75,35 +37,242 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N00.png">
-      <Name>Ryu_Soco_Forte_N00</Name>
+    <Compile Include="Characters\Ryu\Andando\00.png">
+      <Name>00</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N01.png">
-      <Name>Ryu_Soco_Forte_N01</Name>
+    <Compile Include="Characters\Ryu\Andando\01.png">
+      <Name>01</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Characters\Ryu\Soco_Forte\Ryu_Soco_Forte_N02.png">
-      <Name>Ryu_Soco_Forte_N02</Name>
+    <Compile Include="Characters\Ryu\Andando\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Andando\03.png">
+      <Name>03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Andando\04.png">
+      <Name>04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Andando\05.png">
+      <Name>05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Andando\06.png">
+      <Name>06</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N00.png">
-      <Name>Ryu_Chute_Forte_N00</Name>
+    <Compile Include="Menu\Start\00.png">
+      <Name>00</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N01.png">
-      <Name>Ryu_Chute_Forte_N01</Name>
+    <Compile Include="Menu\Start\01.png">
+      <Name>01</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Characters\Ryu\Chute_Forte\Ryu_Chute_Forte_N02.png">
-      <Name>Ryu_Chute_Forte_N02</Name>
+    <Compile Include="Menu\Start\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Menu\Start\03.png">
+      <Name>03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu\Quit\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Menu\Quit\01.png">
+      <Name>01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Menu\Quit\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Menu\Quit\03.png">
+      <Name>03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Chute_Forte\N00.png">
+      <Name>N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Forte\N01.png">
+      <Name>N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Forte\N02.png">
+      <Name>N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menu\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Chute_Fraco\N00.png">
+      <Name>N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Fraco\N01.png">
+      <Name>N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Chute_Fraco\N02.png">
+      <Name>N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Normal\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Normal\01.png">
+      <Name>01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Normal\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Normal\03.png">
+      <Name>03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Normal\04.png">
+      <Name>04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Soco_Forte\N00.png">
+      <Name>N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Forte\N01.png">
+      <Name>N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Forte\N02.png">
+      <Name>N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\Soco_Fraco\N00.png">
+      <Name>N00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Fraco\N01.png">
+      <Name>N01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\Ryu\Soco_Fraco\N02.png">
+      <Name>N02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SelectPlayer\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SelectPlayer\Player01\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="SelectPlayer\Player01\01.png">
+      <Name>01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="SelectPlayer\Player01\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SelectPlayer\Player02\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="SelectPlayer\Player02\01.png">
+      <Name>01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="SelectPlayer\Player02\02.png">
+      <Name>02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Sagat\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ryu\00.png">
+      <Name>00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Ken\00.png">
+      <Name>00</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
