@@ -92,6 +92,12 @@ namespace Projeto_StreetFighter.Animation
 
                         break;
                 }
+
+                //Atualiza a posição dos retangulos de colisão de acordo com o frame desenhado na tela
+                if (PlayerRelatedTo != null && PlayerRelatedTo.state != Players.Player_Manager.PlayerState.NULL)
+                {
+                    PlayerRelatedTo.CollisionCalc.LoadCollision(PlayerRelatedTo, current_freme_index);
+                }
             }
 
 

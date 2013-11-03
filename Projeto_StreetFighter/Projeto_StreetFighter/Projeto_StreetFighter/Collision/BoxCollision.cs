@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace Projeto_StreetFighter.Characters
+namespace Projeto_StreetFighter.Collision
 {
     public class BoxCollision
     {
@@ -25,6 +25,6 @@ namespace Projeto_StreetFighter.Characters
 
     public interface ICollision
     {
-        public void LoadCollision(ref BoxCollision boxCollision, int current_frame, Players.Player_Manager.PlayerState playerState);
+        void LoadCollision(Players.Player player ,int current_frame);
     }
 }

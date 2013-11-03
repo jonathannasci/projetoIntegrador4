@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 
 namespace Projeto_StreetFighter.Menu
 {
-    class SelectMenu
+    public class SelectMenu
     {
         public enum CharacterList { NULL = 0, Char01 = 1, Char02 = 2, Char03 = 3, Char04 = 4, Char05 = 5, Char06 = 6 }
 
@@ -173,6 +173,11 @@ namespace Projeto_StreetFighter.Menu
 
                 LoadPlayerCharacter(ref P2);
 
+                Collision.Collision_Manager.P1 = P1;
+                Collision.Collision_Manager.P2 = P2;
+
+                BarraEnergia.BarraEnergia_Manager.LoadBarraEnergia(Content);
+
                 Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
             }
         }
@@ -219,21 +224,27 @@ namespace Projeto_StreetFighter.Menu
             switch (player.Character)
             {
                 case CharacterList.Char01:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
                 case CharacterList.Char02:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
                 case CharacterList.Char03:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
                 case CharacterList.Char04:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
                 case CharacterList.Char05:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
                 case CharacterList.Char06:
+                    player.CollisionCalc = new Characters.Ryu();
                     Pasta = "Ryu";
                     break;
             }

@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace Projeto_StreetFighter.Players
 {
-    class Player_Manager
+    public class Player_Manager
     {
         public enum PlayerState
         {
@@ -88,13 +88,20 @@ namespace Projeto_StreetFighter.Players
                 {
                     Player_Array[0].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
-                    Player_Array[0].X -= 3;
+                    
+                    if(!Collision.Collision_Manager.IsContato || 
+                        (Collision.Collision_Manager.IsContato && !Player_Array[0].IsReversed))
+                        Player_Array[0].X -= 3;
+
                 }
                 else if (actual_state.IsKeyDown(Keys.D))
                 {
                     Player_Array[0].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
-                    Player_Array[0].X += 3;
+                    
+                    if (!Collision.Collision_Manager.IsContato || 
+                        (Collision.Collision_Manager.IsContato && Player_Array[0].IsReversed))
+                        Player_Array[0].X += 3;
                 }
                 else
                 {
@@ -142,13 +149,17 @@ namespace Projeto_StreetFighter.Players
                 {
                     Player_Array[1].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
-                    Player_Array[1].X -= 3;
+
+                    if (!Collision.Collision_Manager.IsContato || !Player_Array[1].IsReversed)
+                        Player_Array[1].X -= 3;
                 }
                 else if (actual_state.IsKeyDown(Keys.Right))
                 {
                     Player_Array[1].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
-                    Player_Array[1].X += 3;
+
+                    if (!Collision.Collision_Manager.IsContato || Player_Array[1].IsReversed)
+                        Player_Array[1].X += 3;
                 }
                 else
                 {

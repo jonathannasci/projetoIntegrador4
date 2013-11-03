@@ -388,6 +388,24 @@
       <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ken\00.xnb</Output>
       <Time>2013-11-02T15:40:24.2662919-02:00</Time>
     </Item>
+    <Item>
+      <Source>BarraEnergia\BarraEnergia.png</Source>
+      <Name>BarraEnergia\BarraEnergia</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\BarraEnergia\BarraEnergia.xnb</Output>
+      <Time>2013-11-03T16:06:43.3904409-02:00</Time>
+    </Item>
+    <Item>
+      <Source>BarraEnergia\Vida.png</Source>
+      <Name>BarraEnergia\Vida</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\BarraEnergia\Vida.xnb</Output>
+      <Time>2013-11-03T16:06:43.3904409-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{D77A9636-BB55-4767-B79B-C6604FFABD9A}</ContentProjectGUID>

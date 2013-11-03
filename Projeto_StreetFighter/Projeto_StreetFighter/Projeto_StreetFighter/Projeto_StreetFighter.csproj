@@ -74,10 +74,13 @@
   <ItemGroup>
     <Compile Include="Animation\Animator.cs" />
     <Compile Include="Animation\Animator_Controller.cs" />
-    <Compile Include="Characters\BoxCollision.cs" />
+    <Compile Include="BarraEnergia\BarraEnergia.cs" />
+    <Compile Include="BarraEnergia\BarraEnergia_Manager.cs" />
+    <Compile Include="Collision\BoxCollision.cs" />
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\Ken.cs" />
     <Compile Include="Characters\Ryu.cs" />
+    <Compile Include="Collision\Collision_Manager.cs" />
     <Compile Include="Menu\SelectMenu.cs" />
     <Compile Include="Menu\MainMenu.cs" />
     <Compile Include="Other\Functions.cs" />

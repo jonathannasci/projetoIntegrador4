@@ -47,3 +47,5 @@ D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_Stre
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Sagat\00.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ryu\00.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Characters\Ken\00.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\BarraEnergia\BarraEnergia.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\BarraEnergia\Vida.xnb

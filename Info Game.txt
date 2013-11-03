@@ -1,0 +1,28 @@
+############################
+#         Controls         #
+############################
+P1 ================================================
+w - up
+s - down
+a - left
+d - right
+
+u - weak punch
+i - strong punch
+j - weak kick
+k - strong kick
+====================================================
+
+P2 ================================================
+up - up
+down - down
+left - left
+right - right
+
+numPad5 - weak punch
+numPad6 - strong punch
+numPad2 - weak kick
+numPad3 - strong kick
+====================================================
+
+

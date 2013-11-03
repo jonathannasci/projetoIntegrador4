@@ -35,8 +35,8 @@ namespace Projeto_StreetFighter
 
             public struct CharacterSize
             {
-                public static int Width = 200;
-                public static int Height = 200;
+                public static int Width = 213;
+                public static int Height = 192;
             }
 
             public struct FotoSize
@@ -241,6 +241,8 @@ namespace Projeto_StreetFighter
             Menu.MainMenu.Update(Variables.Input.New_Key);
             Menu.SelectMenu.Update(Variables.Input.New_Key, gameTime);
             Players.Player_Manager.Update(Variables.Input.Prev_Key, Variables.Input.New_Key, gameTime);
+            Collision.Collision_Manager.Update();
+            BarraEnergia.BarraEnergia_Manager.Update();
 
             base.Update(gameTime);
         }
@@ -252,6 +254,7 @@ namespace Projeto_StreetFighter
             spriteBatch.Begin();
 
             Animation.Animator_Controller.DrawAll(spriteBatch);
+            BarraEnergia.BarraEnergia_Manager.Draw(spriteBatch);
 
             spriteBatch.End();
             
