@@ -20,6 +20,15 @@ namespace Projeto_StreetFighter.Players
 
         public Characters.Character Character_textures;
 
+        private Characters.BoxCollision boxCollision;
+
+        public Characters.BoxCollision BoxCollision
+        {
+            get { return boxCollision; }
+            set { boxCollision = value; }
+        }
+
+
         public Menu.SelectMenu.CharacterList Character
         {
             get { return character; }
@@ -51,6 +60,7 @@ namespace Projeto_StreetFighter.Players
             this.IsReversed = isReversed;
 
             Character_textures = new Characters.Character();
+            boxCollision = new Characters.BoxCollision();
         }
     }
 }

@@ -64,42 +64,42 @@ namespace Projeto_StreetFighter.Players
                 {
                     Player_Array[0].NonInteruptableAnimation = true;
                     Player_Array[0].state = PlayerState.Soco_Forte_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Forte_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Forte_N, Player_Array[0]);
                 }
                 else if (actual_state.IsKeyDown(Keys.U))
                 {
                     Player_Array[0].NonInteruptableAnimation = true;
                     Player_Array[0].state = PlayerState.Soco_Fraco_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Fraco_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Fraco_N, Player_Array[0]);
                 }
                 else if (actual_state.IsKeyDown(Keys.K))
                 {
                     Player_Array[0].NonInteruptableAnimation = true;
                     Player_Array[0].state = PlayerState.Chute_Forte_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Forte_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Forte_N, Player_Array[0]);
                 }
                 else if (actual_state.IsKeyDown(Keys.J))
                 {
                     Player_Array[0].NonInteruptableAnimation = true;
                     Player_Array[0].state = PlayerState.Chute_Fraco_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Fraco_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Fraco_N, Player_Array[0]);
                 }
                 else if (actual_state.IsKeyDown(Keys.A))
                 {
                     Player_Array[0].state = PlayerState.Andando;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
                     Player_Array[0].X -= 3;
                 }
                 else if (actual_state.IsKeyDown(Keys.D))
                 {
                     Player_Array[0].state = PlayerState.Andando;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
                     Player_Array[0].X += 3;
                 }
                 else
                 {
                     Player_Array[0].state = PlayerState.Normal;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Normal);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Normal, Player_Array[0]);
                 }
             }
         }
@@ -118,42 +118,42 @@ namespace Projeto_StreetFighter.Players
                 {
                     Player_Array[1].NonInteruptableAnimation = true;
                     Player_Array[1].state = PlayerState.Soco_Forte_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Forte_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Forte_N, Player_Array[1]);
                 }
                 else if (actual_state.IsKeyDown(Keys.NumPad5))
                 {
                     Player_Array[1].NonInteruptableAnimation = true;
                     Player_Array[1].state = PlayerState.Soco_Fraco_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Fraco_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Soco_Fraco_N, Player_Array[1]);
                 }
                 else if (actual_state.IsKeyDown(Keys.NumPad3))
                 {
                     Player_Array[1].NonInteruptableAnimation = true;
                     Player_Array[1].state = PlayerState.Chute_Forte_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Forte_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Forte_N, Player_Array[1]);
                 }
                 else if (actual_state.IsKeyDown(Keys.NumPad2))
                 {
                     Player_Array[1].NonInteruptableAnimation = true;
                     Player_Array[1].state = PlayerState.Chute_Fraco_N;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Fraco_N);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Chute_Fraco_N, Player_Array[1]);
                 }
                 else if (actual_state.IsKeyDown(Keys.Left))
                 {
                     Player_Array[1].state = PlayerState.Andando;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
                     Player_Array[1].X -= 3;
                 }
                 else if (actual_state.IsKeyDown(Keys.Right))
                 {
                     Player_Array[1].state = PlayerState.Andando;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
                     Player_Array[1].X += 3;
                 }
                 else
                 {
                     Player_Array[1].state = PlayerState.Normal;
-                    Animation.Animator_Controller.PlayAnimation(PlayerState.Normal);
+                    Animation.Animator_Controller.PlayAnimation(PlayerState.Normal, Player_Array[1]);
                 }
             }
         }

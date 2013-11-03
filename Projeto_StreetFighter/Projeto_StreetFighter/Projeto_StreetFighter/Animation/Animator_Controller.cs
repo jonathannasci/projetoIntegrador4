@@ -68,14 +68,17 @@ namespace Projeto_StreetFighter.Animation
 
         }
 
-        public static void PlayAnimation(Players.Player_Manager.PlayerState name)
+        public static void PlayAnimation(Players.Player_Manager.PlayerState name, Players.Player player)
         {
             foreach (Animation_List_struct stru in Animation_List)
             {
-                if (stru.Player_state_animation == name)
-                    stru.animator.Is_Animating = true;
-                else
-                    stru.animator.Is_Animating = false;
+                if (player == stru.animator.PlayerRelatedTo)
+                {
+                    if (stru.Player_state_animation == name)
+                        stru.animator.Is_Animating = true;
+                    else
+                        stru.animator.Is_Animating = false;
+                }
             }
 
         }
