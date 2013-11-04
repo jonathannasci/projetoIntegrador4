@@ -15,6 +15,9 @@ namespace Projeto_StreetFighter.Collision
         public static bool Is_P1_Acerto = false;
         public static bool Is_P2_Acerto = false;
 
+        public static Players.Player_Manager.PlayerState GolpeP1 = Players.Player_Manager.PlayerState.NULL;
+        public static Players.Player_Manager.PlayerState GolpeP2 = Players.Player_Manager.PlayerState.NULL;
+
         public static void Update()
         {
             if (Game1.Variables.currentWindow != Game1.Variables.CurrentWindow.Game)
@@ -51,10 +54,7 @@ namespace Projeto_StreetFighter.Collision
                     || P1.BoxCollision.Perna.Intersects(P2.BoxCollision.Corpo))
                 {
                     Is_P1_Acerto = true;
-                }
-                else
-                {
-                    Is_P1_Acerto = false;
+                    GolpeP1 = P1.state;
                 }
 
             }
@@ -66,10 +66,7 @@ namespace Projeto_StreetFighter.Collision
                     || P1.BoxCollision.Braco.Intersects(P2.BoxCollision.Corpo))
                 {
                     Is_P1_Acerto = true;
-                }
-                else
-                {
-                    Is_P1_Acerto = false;
+                    GolpeP1 = P1.state;
                 }
             }
 
@@ -82,10 +79,7 @@ namespace Projeto_StreetFighter.Collision
                     || P2.BoxCollision.Perna.Intersects(P1.BoxCollision.Corpo))
                 {
                     Is_P2_Acerto = true;
-                }
-                else
-                {
-                    Is_P2_Acerto = false;
+                    GolpeP2 = P2.state;
                 }
             }
             else if (P2.state == Players.Player_Manager.PlayerState.Soco_Fraco_A || P2.state == Players.Player_Manager.PlayerState.Soco_Forte_A
@@ -96,10 +90,7 @@ namespace Projeto_StreetFighter.Collision
                     || P2.BoxCollision.Braco.Intersects(P1.BoxCollision.Corpo))
                 {
                     Is_P2_Acerto = true;
-                }
-                else
-                {
-                    Is_P2_Acerto = false;
+                    GolpeP2 = P2.state;
                 }
             }
 

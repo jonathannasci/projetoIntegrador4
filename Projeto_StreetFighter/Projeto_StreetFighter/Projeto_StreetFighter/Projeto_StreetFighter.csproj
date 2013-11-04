@@ -83,6 +83,7 @@
     <Compile Include="Collision\Collision_Manager.cs" />
     <Compile Include="Menu\SelectMenu.cs" />
     <Compile Include="Menu\MainMenu.cs" />
+    <Compile Include="Menu\SelectStageMenu.cs" />
     <Compile Include="Other\Functions.cs" />
     <Compile Include="Players\Player.cs" />
     <Compile Include="Players\Player_Manager.cs" />

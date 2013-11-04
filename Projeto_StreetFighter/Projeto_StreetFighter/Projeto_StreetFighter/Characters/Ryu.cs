@@ -28,9 +28,9 @@ namespace Projeto_StreetFighter.Characters
                 case Projeto_StreetFighter.Players.Player_Manager.PlayerState.Normal:
                     
                     //teste colisão
-                    player.BoxCollision.Corpo = new Rectangle(modX * 48 + X - (player.IsReversed ? 72 : 0), 45 + player.Y, 72, 147);
-                    player.BoxCollision.Braco = new Rectangle(modX * 109 + X - (player.IsReversed ? 27 : 0), 66 + player.Y, 27, 54);
-                    player.BoxCollision.Perna = new Rectangle(modX * 115 + X - (player.IsReversed ? 27 : 0), 144 + player.Y, 27, 46);
+                    player.BoxCollision.Corpo = new Rectangle(modX * 96 + X - (player.IsReversed ? 144 : 0), 90 + player.Y, 144, 294);
+                    player.BoxCollision.Braco = new Rectangle(modX * 218 + X - (player.IsReversed ? 54 : 0), 132 + player.Y, 54, 108);
+                    player.BoxCollision.Perna = new Rectangle(modX * 230 + X - (player.IsReversed ? 54 : 0), 288 + player.Y, 54, 92);
                     
                     break;
                 case Projeto_StreetFighter.Players.Player_Manager.PlayerState.Andando:
@@ -38,15 +38,15 @@ namespace Projeto_StreetFighter.Characters
                     if (current_frame == 0 || current_frame == 1 || current_frame == 3 ||
                         current_frame == 4 || current_frame == 5)
                     {
-                        player.BoxCollision.Corpo = new Rectangle(modX * 73 + X - (player.IsReversed ? 43 : 0), 49 + player.Y, 43, 135);
-                        player.BoxCollision.Braco = new Rectangle(modX * 108 + X - (player.IsReversed ? 27 : 0), 70 + player.Y, 27, 51);
-                        player.BoxCollision.Perna = new Rectangle(modX * 102 + X - (player.IsReversed ? 31 : 0), 130 + player.Y, 31, 57);
+                        player.BoxCollision.Corpo = new Rectangle(modX * 146 + X - (player.IsReversed ? 86 : 0), 98 + player.Y, 86, 270);
+                        player.BoxCollision.Braco = new Rectangle(modX * 216 + X - (player.IsReversed ? 54 : 0), 140 + player.Y, 54, 102);
+                        player.BoxCollision.Perna = new Rectangle(modX * 204 + X - (player.IsReversed ? 62 : 0), 260 + player.Y, 62, 114);
                     }
                     else //current_frame 2 e 6
                     {
-                        player.BoxCollision.Corpo = new Rectangle(modX * 46 + X - (player.IsReversed ? 61 : 0), 55 + player.Y, 61, 138);
-                        player.BoxCollision.Braco = new Rectangle(modX * 99 + X - (player.IsReversed ? 31 : 0), 78 + player.Y, 31, 54);
-                        player.BoxCollision.Perna = new Rectangle(modX * 102 + X - (player.IsReversed ? 26 : 0), 135 + player.Y, 26, 54);
+                        player.BoxCollision.Corpo = new Rectangle(modX * 92 + X - (player.IsReversed ? 122 : 0), 110 + player.Y, 122, 176);
+                        player.BoxCollision.Braco = new Rectangle(modX * 198 + X - (player.IsReversed ? 62 : 0), 156 + player.Y, 62, 108);
+                        player.BoxCollision.Perna = new Rectangle(modX * 204 + X - (player.IsReversed ? 52 : 0), 270 + player.Y, 52, 108);
                     }
                     break;
                 case Projeto_StreetFighter.Players.Player_Manager.PlayerState.Alto:
@@ -75,21 +75,21 @@ namespace Projeto_StreetFighter.Characters
                     break;
                 case Projeto_StreetFighter.Players.Player_Manager.PlayerState.Soco_Fraco_N:
 
-                    player.BoxCollision.Corpo = new Rectangle(modX * 78 + X - (player.IsReversed ? 45 : 0), 49 + player.Y, 45, 142);
-                    player.BoxCollision.Perna = new Rectangle(modX * 106 + X - (player.IsReversed ? 34 : 0), 144 + player.Y, 34, 46);
+                    player.BoxCollision.Corpo = new Rectangle(modX * 156 + X - (player.IsReversed ? 90 : 0), 98 + player.Y, 90, 284);
+                    player.BoxCollision.Perna = new Rectangle(modX * 212 + X - (player.IsReversed ? 68 : 0), 288 + player.Y, 68, 92);
                     
                     switch (current_frame)
                     {
                         case 0:
-                            player.BoxCollision.Braco = new Rectangle(modX * 114 + X - (player.IsReversed ? 25 : 0), 99 + player.Y, 25, 81);
+                            player.BoxCollision.Braco = new Rectangle(modX * 228 + X - (player.IsReversed ? 50 : 0), 198 + player.Y, 50, 162);
                             break;
 
                         case 1:
-                            player.BoxCollision.Braco = new Rectangle(modX * 118 + X - (player.IsReversed ? 40 : 0), 46 + player.Y, 40, 40);
+                            player.BoxCollision.Braco = new Rectangle(modX * 236 + X - (player.IsReversed ? 80 : 0), 92 + player.Y, 80, 80);
                             break;
 
                         case 2:
-                            player.BoxCollision.Braco = new Rectangle(modX * 115 + X - (player.IsReversed ? 93 : 0), 63 + player.Y, 93, 25);
+                            player.BoxCollision.Braco = new Rectangle(modX * 230 + X - (player.IsReversed ? 186 : 0), 126 + player.Y, 186, 50);
                             break;
                     }
 

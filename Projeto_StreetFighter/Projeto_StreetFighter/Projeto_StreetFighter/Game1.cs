@@ -24,7 +24,7 @@ namespace Projeto_StreetFighter
             public static Rectangle GameRectangle = new Rectangle(
                 0, 0, ResolucaoRectangle.Width, ResolucaoRectangle.Height - 100);
 
-            public enum CurrentWindow { Menu, SelectPlayer, Load ,Game }
+            public enum CurrentWindow { Menu, SelectPlayer, Load, Game, SelectStage }
             public static CurrentWindow currentWindow = CurrentWindow.Menu;
 
             public struct Input
@@ -35,8 +35,8 @@ namespace Projeto_StreetFighter
 
             public struct CharacterSize
             {
-                public static int Width = 213;
-                public static int Height = 192;
+                public static int Width = 426;
+                public static int Height = 384;
             }
 
             public struct FotoSize
@@ -240,6 +240,7 @@ namespace Projeto_StreetFighter
 
             Menu.MainMenu.Update(Variables.Input.New_Key);
             Menu.SelectMenu.Update(Variables.Input.New_Key, gameTime);
+            Menu.SelectStageMenu.Update(Variables.Input.New_Key, gameTime);
             Players.Player_Manager.Update(Variables.Input.Prev_Key, Variables.Input.New_Key, gameTime);
             Collision.Collision_Manager.Update();
             BarraEnergia.BarraEnergia_Manager.Update();
@@ -253,6 +254,7 @@ namespace Projeto_StreetFighter
             
             spriteBatch.Begin();
 
+            Menu.SelectStageMenu.Draw(spriteBatch);
             Animation.Animator_Controller.DrawAll(spriteBatch);
             BarraEnergia.BarraEnergia_Manager.Draw(spriteBatch);
 

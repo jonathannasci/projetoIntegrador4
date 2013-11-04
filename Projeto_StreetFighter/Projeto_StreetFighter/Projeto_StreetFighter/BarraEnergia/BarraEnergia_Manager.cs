@@ -48,9 +48,9 @@ namespace Projeto_StreetFighter.BarraEnergia
             if (Game1.Variables.currentWindow != Game1.Variables.CurrentWindow.Game)
                 return;
 
-            if (Collision.Collision_Manager.Is_P1_Acerto)
+            if (Collision.Collision_Manager.Is_P1_Acerto && !P1.IsHealthAtualizado)
             {
-                switch (P1.state)
+                switch (Collision.Collision_Manager.GolpeP1)
                 {
                     case Players.Player_Manager.PlayerState.Soco_Fraco_N:
                         P2.Health -= 7;
@@ -81,10 +81,14 @@ namespace Projeto_StreetFighter.BarraEnergia
                     case Players.Player_Manager.PlayerState.Chute_Forte_B:
                         break;
                 }
+
+                Collision.Collision_Manager.Is_P1_Acerto = false;
+                Collision.Collision_Manager.GolpeP1 = Players.Player_Manager.PlayerState.NULL;
+                P1.IsHealthAtualizado = true;
             }
-            if (Collision.Collision_Manager.Is_P2_Acerto)
+            if (Collision.Collision_Manager.Is_P2_Acerto && !P2.IsHealthAtualizado)
             {
-                switch (P2.state)
+                switch (Collision.Collision_Manager.GolpeP2)
                 {
                     case Players.Player_Manager.PlayerState.Soco_Fraco_N:
                         P1.Health -= 7;
@@ -115,6 +119,10 @@ namespace Projeto_StreetFighter.BarraEnergia
                     case Players.Player_Manager.PlayerState.Chute_Forte_B:
                         break;
                 }
+
+                Collision.Collision_Manager.Is_P2_Acerto = false;
+                Collision.Collision_Manager.GolpeP2 = Players.Player_Manager.PlayerState.NULL;
+                P2.IsHealthAtualizado = true;
             }
 
 
@@ -131,8 +139,8 @@ namespace Projeto_StreetFighter.BarraEnergia
             sprite.Draw(Barra_P1.texture_BarraEnergia, new Rectangle(Barra_P1.X, Barra_P1.Y, Barra_P1.Width, Barra_P1.Height), Color.White);
             sprite.Draw(Barra_P2.texture_BarraEnergia, new Rectangle(Barra_P2.X, Barra_P2.Y, Barra_P2.Width, Barra_P2.Height), null, Color.White, 0, new Vector2(), SpriteEffects.FlipHorizontally, 0);
 
-            sprite.Draw(Barra_P1.texture_Vida, new Rectangle(Barra_P1.X + vidaPerdida_P1, Barra_P1.Y, Barra_P1.Width - vidaPerdida_P1, Barra_P1.Height), Color.White);
-            sprite.Draw(Barra_P2.texture_Vida, new Rectangle(Barra_P2.X, Barra_P2.Y, Barra_P2.Width - vidaPerdida_P2, Barra_P2.Height), null, Color.White, 0, new Vector2(), SpriteEffects.FlipHorizontally, 0);
+            sprite.Draw(Barra_P1.texture_Vida, new Rectangle(Barra_P1.X + 4 * vidaPerdida_P1, Barra_P1.Y, Barra_P1.Width -  4 * vidaPerdida_P1, Barra_P1.Height), Color.White);
+            sprite.Draw(Barra_P2.texture_Vida, new Rectangle(Barra_P2.X, Barra_P2.Y, Barra_P2.Width - 4 * vidaPerdida_P2, Barra_P2.Height), null, Color.White, 0, new Vector2(), SpriteEffects.FlipHorizontally, 0);
 
         }
 

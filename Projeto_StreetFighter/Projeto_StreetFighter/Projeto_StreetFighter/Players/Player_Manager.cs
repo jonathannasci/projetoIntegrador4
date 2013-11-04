@@ -33,9 +33,15 @@ namespace Projeto_StreetFighter.Players
                 Player_Array.Add(new Player(false, Game1.Variables.GameRectangle.Width - 150, isReversed: true));
         }
 
-        public static void GenerateAnimation()
+        public static void LoadGame()
         {
+            Player_Array[0].X = 50;
+            Player_Array[0].Y = Game1.Variables.GameRectangle.Y + Game1.Variables.GameRectangle.Height -
+                    Game1.Variables.CharacterSize.Height;
 
+            Player_Array[1].X = Game1.Variables.ResolucaoRectangle.Width - Game1.Variables.CharacterSize.Width - 50;
+            Player_Array[1].Y = Game1.Variables.GameRectangle.Y + Game1.Variables.GameRectangle.Height -
+                    Game1.Variables.CharacterSize.Height;
         }
 
         public static void Update(KeyboardState prev_state, KeyboardState actual_state, GameTime time)
@@ -91,7 +97,7 @@ namespace Projeto_StreetFighter.Players
                     
                     if(!Collision.Collision_Manager.IsContato || 
                         (Collision.Collision_Manager.IsContato && !Player_Array[0].IsReversed))
-                        Player_Array[0].X -= 3;
+                        Player_Array[0].X -= 4;
 
                 }
                 else if (actual_state.IsKeyDown(Keys.D))
@@ -101,7 +107,7 @@ namespace Projeto_StreetFighter.Players
                     
                     if (!Collision.Collision_Manager.IsContato || 
                         (Collision.Collision_Manager.IsContato && Player_Array[0].IsReversed))
-                        Player_Array[0].X += 3;
+                        Player_Array[0].X += 4;
                 }
                 else
                 {
@@ -151,7 +157,7 @@ namespace Projeto_StreetFighter.Players
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
 
                     if (!Collision.Collision_Manager.IsContato || !Player_Array[1].IsReversed)
-                        Player_Array[1].X -= 3;
+                        Player_Array[1].X -= 4;
                 }
                 else if (actual_state.IsKeyDown(Keys.Right))
                 {
@@ -159,7 +165,7 @@ namespace Projeto_StreetFighter.Players
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
 
                     if (!Collision.Collision_Manager.IsContato || Player_Array[1].IsReversed)
-                        Player_Array[1].X += 3;
+                        Player_Array[1].X += 4;
                 }
                 else
                 {

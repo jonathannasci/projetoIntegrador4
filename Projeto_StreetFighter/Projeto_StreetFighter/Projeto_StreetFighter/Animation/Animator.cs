@@ -111,18 +111,21 @@ namespace Projeto_StreetFighter.Animation
                     case Animator_Controller.AnimationType.Normal:
                         if(current_freme_index == textures_array.Count - 1){
                             PlayerRelatedTo.NonInteruptableAnimation = false;
+                            PlayerRelatedTo.IsHealthAtualizado = false;
                         }
                         break;
                     case Animator_Controller.AnimationType.Normal_Reversed:
                         if (is_animating_backward && current_freme_index == 0)
                         {
                             PlayerRelatedTo.NonInteruptableAnimation = false;
+                            PlayerRelatedTo.IsHealthAtualizado = false;
                         }
                         break;
                     case Animator_Controller.AnimationType.Reversed:
                         if (current_freme_index == 0)
                         {
                             PlayerRelatedTo.NonInteruptableAnimation = false;
+                            PlayerRelatedTo.IsHealthAtualizado = false;
                         }
                         break;
                 }

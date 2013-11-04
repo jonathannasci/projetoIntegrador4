@@ -12,7 +12,7 @@ namespace Projeto_StreetFighter.Animation
         //public delegate void AnimationEnded_delegate();
         //public static event AnimationEnded_delegate Animation_ended;
 
-        public enum OtherAnimation_enum { NULL, SplashScreen_Start, SplashScreen_Quit, SelectMenu }
+        public enum OtherAnimation_enum { NULL, SplashScreen_Start, SplashScreen_Quit, SelectMenu, SelectStage }
         public struct Animation_List_struct
         {
             public Animator animator;

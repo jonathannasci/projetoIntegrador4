@@ -178,7 +178,9 @@ namespace Projeto_StreetFighter.Menu
 
                 BarraEnergia.BarraEnergia_Manager.LoadBarraEnergia(Content);
 
-                Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
+                Menu.SelectStageMenu.LoadSelectStageMenu(Content);
+
+                Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.SelectStage;
             }
         }
 

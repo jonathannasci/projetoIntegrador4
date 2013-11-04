@@ -406,6 +406,60 @@
       <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\BarraEnergia\Vida.xnb</Output>
       <Time>2013-11-03T16:06:43.3904409-02:00</Time>
     </Item>
+    <Item>
+      <Source>Stages\00.png</Source>
+      <Name>Stages\00</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\00.xnb</Output>
+      <Time>2013-11-03T21:18:49.1721758-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stages\01.png</Source>
+      <Name>Stages\01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\01.xnb</Output>
+      <Time>2013-11-03T21:18:49.1721758-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stages\02.png</Source>
+      <Name>Stages\02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\02.xnb</Output>
+      <Time>2013-11-03T21:18:49.1721758-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stages\03.png</Source>
+      <Name>Stages\03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\03.xnb</Output>
+      <Time>2013-11-03T21:18:49.1877769-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stages\04.png</Source>
+      <Name>Stages\04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\04.xnb</Output>
+      <Time>2013-11-03T21:18:49.1877769-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stages\05.png</Source>
+      <Name>Stages\05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\05.xnb</Output>
+      <Time>2013-11-03T21:18:49.1877769-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{D77A9636-BB55-4767-B79B-C6604FFABD9A}</ContentProjectGUID>
