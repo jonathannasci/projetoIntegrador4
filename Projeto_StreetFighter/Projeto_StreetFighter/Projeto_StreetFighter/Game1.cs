@@ -31,6 +31,8 @@ namespace Projeto_StreetFighter
             {
                 public static KeyboardState Prev_Key, New_Key;
                 public static MouseState Prev_Mouse, New_Mouse;
+
+                public static Keys keyPressed = Keys.None;
             }
 
             public struct CharacterSize

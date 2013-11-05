@@ -58,7 +58,7 @@ namespace Projeto_StreetFighter.Menu
 
         static Players.Player P1;
 
-        static int delay;
+        //static int delay;
 
         static ContentManager Content;
 
@@ -111,16 +111,20 @@ namespace Projeto_StreetFighter.Menu
 
             UpdatePosition(P1);
 
-
-            delay += gameTime.ElapsedGameTime.Milliseconds;
-
-            if (delay < 90)
+            if (!Other.Functions.PermiteKeyPressed(new_key))
                 return;
 
-            delay = 0;
+            //delay += gameTime.ElapsedGameTime.Milliseconds;
+
+            //if (delay < 90)
+            //    return;
+
+            //delay = 0;
 
             if (new_key.IsKeyDown(Keys.S))
             {
+
+                Game1.Variables.Input.keyPressed = Keys.S;
                 if (SelectedStage <= Stages.St02)
                 {
                     SelectedStage += 3;
@@ -128,6 +132,8 @@ namespace Projeto_StreetFighter.Menu
             }
             else if (new_key.IsKeyDown(Keys.W))
             {
+
+                Game1.Variables.Input.keyPressed = Keys.W;
                 if (SelectedStage >= Stages.St03)
                 {
                     SelectedStage -= 3;
@@ -135,6 +141,8 @@ namespace Projeto_StreetFighter.Menu
             }
             else if (new_key.IsKeyDown(Keys.A))
             {
+
+                Game1.Variables.Input.keyPressed = Keys.A;
                 if (SelectedStage != Stages.St00
                     && SelectedStage != Stages.St03)
                 {
@@ -143,6 +151,8 @@ namespace Projeto_StreetFighter.Menu
             }
             else if (new_key.IsKeyDown(Keys.D))
             {
+
+                Game1.Variables.Input.keyPressed = Keys.D;
                 if (SelectedStage != Stages.St02
                     && SelectedStage != Stages.St05)
                 {
@@ -151,6 +161,7 @@ namespace Projeto_StreetFighter.Menu
             }
             else if (new_key.IsKeyDown(Keys.Enter))
             {
+                Game1.Variables.Input.keyPressed = Keys.Enter;
                 Players.Player_Manager.LoadGame();
                 Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
             }

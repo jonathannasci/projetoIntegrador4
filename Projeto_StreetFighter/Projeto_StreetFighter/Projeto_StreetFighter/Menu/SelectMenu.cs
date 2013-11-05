@@ -63,7 +63,9 @@ namespace Projeto_StreetFighter.Menu
         public static List<Texture2D> Textures_Animation_Player01 = new List<Texture2D>();
         public static List<Texture2D> Textures_Animation_Player02 = new List<Texture2D>();
 
-        private static int delay = 0;
+        //private static int delay = 0;
+
+        public static Keys keyPressed = Keys.None;
 
         public static void ShowSelectMenu()
         {
@@ -82,6 +84,8 @@ namespace Projeto_StreetFighter.Menu
             if (Game1.Variables.currentWindow != Game1.Variables.CurrentWindow.SelectPlayer)
                 return;
 
+            bool IsP1Clicou, IsP2Clicou;
+
             Players.Player P1 = Players.Player_Manager.Player_Array[0];
             Players.Player P2 = Players.Player_Manager.Player_Array[1];
 
@@ -99,75 +103,88 @@ namespace Projeto_StreetFighter.Menu
             //if (array_keys.Length == 0)
             //    return;
 
-            delay += gameTime.ElapsedGameTime.Milliseconds;
+            //delay += gameTime.ElapsedGameTime.Milliseconds;
 
-            if (delay < 90)
-                return;
+            //if (delay < 90)
+            //    return;
 
-            delay = 0;
+            //delay = 0;
 
-            if (new_state.IsKeyDown(Keys.S))
+            IsP1Clicou = Other.Functions.PermiteKeyPressed(new_state);
+            IsP2Clicou = Other.Functions.PermiteKeyPressed(new_state, ref keyPressed);
+
+            if (new_state.IsKeyDown(Keys.S) && IsP1Clicou)
             {
+                Game1.Variables.Input.keyPressed = Keys.S;
                 if (P1.Character <= CharacterList.Char03)
                 {
                     P1.Character += 3;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.W))
+            else if (new_state.IsKeyDown(Keys.W) && IsP1Clicou)
             {
+                Game1.Variables.Input.keyPressed = Keys.W;
                 if (P1.Character >= CharacterList.Char04)
                 {
                     P1.Character -= 3;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.A))
+            else if (new_state.IsKeyDown(Keys.A) && IsP1Clicou)
             {
+                Game1.Variables.Input.keyPressed = Keys.A;
                 if (P1.Character != CharacterList.Char01
                     && P1.Character != CharacterList.Char04)
                 {
                     P1.Character -= 1;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.D))
+            else if (new_state.IsKeyDown(Keys.D) && IsP1Clicou)
             {
+                Game1.Variables.Input.keyPressed = Keys.D;
                 if (P1.Character != CharacterList.Char03
                     && P1.Character != CharacterList.Char06)
                 {
                     P1.Character += 1;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.Down))
+            else if (new_state.IsKeyDown(Keys.Down) && IsP2Clicou)
             {
+                keyPressed = Keys.Down;
                 if (P2.Character <= CharacterList.Char03)
                 {
                     P2.Character += 3;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.Up))
+            else if (new_state.IsKeyDown(Keys.Up) && IsP2Clicou)
             {
+                keyPressed = Keys.Up;
                 if (P2.Character >= CharacterList.Char04)
                 {
                     P2.Character -= 3;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.Left))
+            else if (new_state.IsKeyDown(Keys.Left) && IsP2Clicou)
             {
+                keyPressed = Keys.Left;
                 if (P2.Character != CharacterList.Char01
                     && P2.Character != CharacterList.Char04)
                 {
                     P2.Character -= 1;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.Right))
+            else if (new_state.IsKeyDown(Keys.Right) && IsP2Clicou)
             {
+                keyPressed = Keys.Right;
                 if (P2.Character != CharacterList.Char03
                     && P2.Character != CharacterList.Char06)
                 {
                     P2.Character += 1;
                 }
             }
-            else if (new_state.IsKeyDown(Keys.Enter))
+            else if (new_state.IsKeyDown(Keys.Enter) && IsP1Clicou)
             {
+
+                Game1.Variables.Input.keyPressed = Keys.Enter;
 
                 LoadPlayerCharacter(ref P1);
 

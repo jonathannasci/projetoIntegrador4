@@ -37,20 +37,27 @@ namespace Projeto_StreetFighter.Menu
             if (array_keys.Length == 0)
                 return;
 
+            if (!Other.Functions.PermiteKeyPressed(new_state))
+                return;
+
             if (new_state.IsKeyDown(Keys.S))
             {
+
+                Game1.Variables.Input.keyPressed = Keys.S;
                 menu_Opcao = Menu_Opcao.Menu_Quit;
                 Animation.Animator_Controller.PlayAnimation(
                     Animation.Animator_Controller.OtherAnimation_enum.SplashScreen_Quit);
             }
             else if (new_state.IsKeyDown(Keys.W))
             {
+                Game1.Variables.Input.keyPressed = Keys.W;
                 menu_Opcao = Menu_Opcao.Menu_Start;
                 Animation.Animator_Controller.PlayAnimation(
                     Animation.Animator_Controller.OtherAnimation_enum.SplashScreen_Start);
             }
             else if (new_state.IsKeyDown(Keys.Enter))
             {
+                Game1.Variables.Input.keyPressed = Keys.Enter;
                 if (menu_Opcao == Menu_Opcao.Menu_Start)
                 {
                     Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.SelectPlayer;
