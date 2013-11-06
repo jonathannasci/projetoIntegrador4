@@ -238,12 +238,13 @@ namespace Projeto_StreetFighter
             Variables.Input.Prev_Mouse = Variables.Input.New_Mouse;
             Variables.Input.New_Mouse = Mouse.GetState();
 
-            Animation.Animator_Controller.UpdateAll(gameTime);
+            
 
             Menu.MainMenu.Update(Variables.Input.New_Key);
             Menu.SelectMenu.Update(Variables.Input.New_Key, gameTime);
             Menu.SelectStageMenu.Update(Variables.Input.New_Key, gameTime);
             Players.Player_Manager.Update(Variables.Input.Prev_Key, Variables.Input.New_Key, gameTime);
+            Animation.Animator_Controller.UpdateAll(gameTime);
             Collision.Collision_Manager.Update();
             BarraEnergia.BarraEnergia_Manager.Update();
 

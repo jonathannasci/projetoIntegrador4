@@ -95,6 +95,14 @@ namespace Projeto_StreetFighter.Animation
 
         }
 
+        public static void UpdateAllPlayer(Players.Player player, GameTime time)
+        {
+            foreach(Animation_List_struct s in Animation_List){
+                if (player == s.animator.PlayerRelatedTo)
+                    s.animator.Update(time);
+            }
+        }
+
         public static void UpdateAll(GameTime time)
         {
             lock (Animation_List)
