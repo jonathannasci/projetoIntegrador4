@@ -115,7 +115,7 @@ namespace Projeto_StreetFighter.Players
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Normal, Player_Array[0]);
                 }
 
-                //Animation.Animator_Controller.UpdateAllPlayer(Player_Array[0], time);
+               
             }
         }
 
@@ -175,7 +175,7 @@ namespace Projeto_StreetFighter.Players
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Normal, Player_Array[1]);
                 }
 
-                //Animation.Animator_Controller.UpdateAllPlayer(Player_Array[1], time);
+                
             }
         }
 
