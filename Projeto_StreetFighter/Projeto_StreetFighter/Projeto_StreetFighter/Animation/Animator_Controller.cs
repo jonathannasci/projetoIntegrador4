@@ -12,7 +12,8 @@ namespace Projeto_StreetFighter.Animation
         //public delegate void AnimationEnded_delegate();
         //public static event AnimationEnded_delegate Animation_ended;
 
-        public enum OtherAnimation_enum { NULL, SplashScreen_Start, SplashScreen_Quit, SelectMenu, SelectStage }
+        public enum OtherAnimation_enum { NULL, SplashScreen_Start, SplashScreen_Quit, 
+                                            SelectMenu, SelectStage, LoadScreen }
         public struct Animation_List_struct
         {
             public Animator animator;
@@ -93,6 +94,11 @@ namespace Projeto_StreetFighter.Animation
                     stru.animator.Is_Animating = false;
             }
 
+        }
+
+        public static void RemoveAnimation(Game1.Variables.CurrentWindow currentWindow)
+        {
+            Animation_List.RemoveAll(anim_list => anim_list.animator.window != currentWindow );
         }
         
         public static void UpdateAll(GameTime time)

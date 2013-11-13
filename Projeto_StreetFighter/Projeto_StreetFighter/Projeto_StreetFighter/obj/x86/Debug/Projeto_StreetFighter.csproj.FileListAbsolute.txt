@@ -55,3 +55,5 @@ D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_Stre
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\03.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\04.xnb
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Debug\Content\Stages\05.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Debug\Projeto_StreetFighter.Other.FrmQuit.resources
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Debug\Projeto_StreetFighter.csproj.GenerateResource.Cache

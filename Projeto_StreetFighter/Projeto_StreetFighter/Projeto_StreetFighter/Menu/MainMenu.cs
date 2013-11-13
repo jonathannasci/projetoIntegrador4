@@ -22,6 +22,7 @@ namespace Projeto_StreetFighter.Menu
         {
             if (Game1.Variables.currentWindow == Game1.Variables.CurrentWindow.Menu)
             {
+                Animation.Animator_Controller.RemoveAnimation(Game1.Variables.CurrentWindow.Menu);
                 Animation.Animator_Controller.PlayAnimation(
                     Animation.Animator_Controller.OtherAnimation_enum.SplashScreen_Start);
                 menu_Opcao = Menu_Opcao.Menu_Start;

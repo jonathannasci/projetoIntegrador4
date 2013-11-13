@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Threading;
 
 namespace Projeto_StreetFighter
 {
@@ -17,7 +18,9 @@ namespace Projeto_StreetFighter
         
         public struct Variables
         {
+            
             public static bool Exit = false;
+            public static bool Paused = false;
 
             public static Rectangle ResolucaoRectangle = new Rectangle(0, 0, 1024, 768);
 
@@ -73,53 +76,7 @@ namespace Projeto_StreetFighter
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //Other.Functions.LoadTextureFrame(
-            //    ref Characters.Character.Textures.Normal_Instance,
-            //    Content.Load<Texture2D>("Characters/Ken/Ken_Normal"));
-
-
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Normal/0" + i.ToString()));
-            //}
-
-            //for (int i = 0; i < 7; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Andando_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Andando/0" + i.ToString()));
-            //}
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Chute_Forte_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Chute_Forte/N0" + i.ToString()));
-            //}
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Chute_Fraco_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Chute_Fraco/N0" + i.ToString()));
-            //}
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Soco_Forte_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Soco_Forte/N0" + i.ToString()));
-            //}
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Other.Functions.LoadTextureFrame(
-            //        ref Characters.Character.Textures.Normal_Soco_Fraco_Instance,
-            //        Content.Load<Texture2D>("Characters/Ryu/Soco_Fraco/N0" + i.ToString()));
-            //}
-
+            
             for (int i = 0; i < 4; i++)
             {
                 Other.Functions.LoadTextureFrame(
@@ -142,8 +99,7 @@ namespace Projeto_StreetFighter
             Players.Player_Manager.AddPlayer();
 
             LoadOthersAnimation();
-            //LoadCharactersAnimation();
-
+            
             Menu.MainMenu.ShowSplashScreen();
 
         }
@@ -171,56 +127,7 @@ namespace Projeto_StreetFighter
             
         }
 
-        //public static void LoadCharactersAnimation()
-        //{
-        //    Animation.Animator_Controller.LoadAnimator(
-        //            Characters.Character.Textures.Normal_Soco_Forte_Instance, 200, 400,
-        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //            Game1.Variables.CurrentWindow.Game, 90,
-        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
-        //            Players.Player_Manager.Player_Array[0],
-        //            Players.Player_Manager.PlayerState.Soco_Forte_N, IsGolpe: true);
-
-        //    Animation.Animator_Controller.LoadAnimator(
-        //            Characters.Character.Textures.Normal_Soco_Fraco_Instance, 200, 400,
-        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //            Game1.Variables.CurrentWindow.Game, 70,
-        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
-        //            Players.Player_Manager.Player_Array[0],
-        //            Players.Player_Manager.PlayerState.Soco_Fraco_N, IsGolpe: true);
-
-        //    Animation.Animator_Controller.LoadAnimator(
-        //            Characters.Character.Textures.Normal_Chute_Forte_Instance, 200, 400,
-        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //            Game1.Variables.CurrentWindow.Game, 90,
-        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
-        //            Players.Player_Manager.Player_Array[0],
-        //            Players.Player_Manager.PlayerState.Chute_Forte_N, IsGolpe: true);
-
-        //    Animation.Animator_Controller.LoadAnimator(
-        //            Characters.Character.Textures.Normal_Chute_Fraco_Instance, 200, 400,
-        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //            Game1.Variables.CurrentWindow.Game, 70,
-        //            Animation.Animator_Controller.AnimationType.Normal_Reversed,
-        //            Players.Player_Manager.Player_Array[0],
-        //            Players.Player_Manager.PlayerState.Chute_Fraco_N, IsGolpe: true);
-
-        //    Animation.Animator_Controller.LoadAnimator(
-        //            Characters.Character.Textures.Normal_Andando_Instance, 200, 400,
-        //            Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //            Game1.Variables.CurrentWindow.Game, 110,
-        //            Animation.Animator_Controller.AnimationType.Normal,
-        //            Players.Player_Manager.Player_Array[0],
-        //            Players.Player_Manager.PlayerState.Andando);
-
-        //    Animation.Animator_Controller.LoadAnimator(
-        //        Characters.Character.Textures.Normal_Instance, 200, 400,
-        //        Variables.CharacterSize.Width, Variables.CharacterSize.Height,
-        //        Game1.Variables.CurrentWindow.Game, 120,
-        //        Animation.Animator_Controller.AnimationType.Normal_Reversed,
-        //        Players.Player_Manager.Player_Array[0],
-        //        Players.Player_Manager.PlayerState.Normal);
-        //}
+        
 
         protected override void UnloadContent()
         {
@@ -239,7 +146,10 @@ namespace Projeto_StreetFighter
             Variables.Input.New_Mouse = Mouse.GetState();
 
             
+            if (Variables.Paused == true)
+                return;
 
+            
             Menu.MainMenu.Update(Variables.Input.New_Key);
             Menu.SelectMenu.Update(Variables.Input.New_Key, gameTime);
             Menu.SelectStageMenu.Update(Variables.Input.New_Key, gameTime);
@@ -247,6 +157,7 @@ namespace Projeto_StreetFighter
             Animation.Animator_Controller.UpdateAll(gameTime);
             Collision.Collision_Manager.Update();
             BarraEnergia.BarraEnergia_Manager.Update();
+            Other.Functions.Update(Variables.Input.New_Key);
 
             base.Update(gameTime);
         }

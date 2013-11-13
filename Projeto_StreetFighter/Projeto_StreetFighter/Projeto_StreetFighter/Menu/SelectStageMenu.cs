@@ -162,6 +162,7 @@ namespace Projeto_StreetFighter.Menu
             else if (new_key.IsKeyDown(Keys.Enter))
             {
                 Game1.Variables.Input.keyPressed = Keys.Enter;
+                //OtherScreens.LoadScreen_Manager.ShowLoadScreen(Content);
                 Players.Player_Manager.LoadGame();
                 Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
             }
