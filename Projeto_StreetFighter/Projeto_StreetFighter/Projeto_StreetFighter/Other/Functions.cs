@@ -52,7 +52,8 @@ namespace Projeto_StreetFighter.Other
 
         public static void Update(KeyboardState new_state)
         {
-            if (Game1.Variables.currentWindow == Game1.Variables.CurrentWindow.Menu)
+            if (Game1.Variables.currentWindow == Game1.Variables.CurrentWindow.Menu 
+                || Game1.Variables.currentWindow == Game1.Variables.CurrentWindow.Load)
                 return;
 
             if (new_state.IsKeyDown(Keys.Escape))

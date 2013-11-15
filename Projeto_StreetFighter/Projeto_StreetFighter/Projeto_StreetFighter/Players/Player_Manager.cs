@@ -94,10 +94,15 @@ namespace Projeto_StreetFighter.Players
                 {
                     Player_Array[0].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
-                    
-                    if(!Collision.Collision_Manager.IsContato || 
-                        (Collision.Collision_Manager.IsContato && !Player_Array[0].IsReversed))
+
+                    if (!Collision.Collision_Manager.IsContato ||
+                        !Player_Array[0].IsReversed &&
+                        Player_Array[0].X > Game1.Variables.ResolucaoRectangle.X - Game1.Variables.CharacterSize.Width / 3)
+                    {
                         Player_Array[0].X -= 4;
+                        if (Player_Array[0].X < Game1.Variables.ResolucaoRectangle.X - Game1.Variables.CharacterSize.Width / 3)
+                            Player_Array[0].X = Game1.Variables.ResolucaoRectangle.X - Game1.Variables.CharacterSize.Width / 3;
+                    }
 
                 }
                 else if (actual_state.IsKeyDown(Keys.D))
@@ -106,7 +111,7 @@ namespace Projeto_StreetFighter.Players
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[0]);
                     
                     if (!Collision.Collision_Manager.IsContato || 
-                        (Collision.Collision_Manager.IsContato && Player_Array[0].IsReversed))
+                        Player_Array[0].IsReversed)
                         Player_Array[0].X += 4;
                 }
                 else
@@ -127,7 +132,7 @@ namespace Projeto_StreetFighter.Players
 
             if (!Player_Array[1].NonInteruptableAnimation)
             {
-                CheckForCombos(prev_state, actual_state, time);
+                //CheckForCombos(prev_state, actual_state, time);
 
                 if (actual_state.IsKeyDown(Keys.NumPad6))
                 {
@@ -166,8 +171,14 @@ namespace Projeto_StreetFighter.Players
                     Player_Array[1].state = PlayerState.Andando;
                     Animation.Animator_Controller.PlayAnimation(PlayerState.Andando, Player_Array[1]);
 
-                    if (!Collision.Collision_Manager.IsContato || Player_Array[1].IsReversed)
+                    if (!Collision.Collision_Manager.IsContato ||
+                        Player_Array[1].IsReversed &&
+                        Player_Array[1].X < Game1.Variables.ResolucaoRectangle.Width - Game1.Variables.CharacterSize.Width * 2 / 3)
+                    {
                         Player_Array[1].X += 4;
+                        if (Player_Array[1].X > Game1.Variables.ResolucaoRectangle.Width - Game1.Variables.CharacterSize.Width * 2 / 3)
+                            Player_Array[1].X = Game1.Variables.ResolucaoRectangle.Width - Game1.Variables.CharacterSize.Width * 2 / 3;
+                    }
                 }
                 else
                 {

@@ -55,3 +55,7 @@ D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_Stre
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Release\Projeto_StreetFighter.exe
 D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Release\Projeto_StreetFighter.pdb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Release\Projeto_StreetFighter.Other.FrmQuit.resources
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\obj\x86\Release\Projeto_StreetFighter.csproj.GenerateResource.Cache
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Release\Content\OtherScreens\Credits\Credits.xnb
+D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Release\Content\OtherScreens\Load\Load.xnb

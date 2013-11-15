@@ -56,9 +56,9 @@ namespace Projeto_StreetFighter.Menu
         public static List<Texture2D> Textures_Animation_Char01 = new List<Texture2D>();
         public static List<Texture2D> Textures_Animation_Char02 = new List<Texture2D>();
         public static List<Texture2D> Textures_Animation_Char03 = new List<Texture2D>();
-        //public static List<Texture2D> Textures_Animation_Char04 = new List<Texture2D>();
-        //public static List<Texture2D> Textures_Animation_Char05 = new List<Texture2D>();
-        //public static List<Texture2D> Textures_Animation_Char06 = new List<Texture2D>();
+        public static List<Texture2D> Textures_Animation_Char04 = new List<Texture2D>();
+        public static List<Texture2D> Textures_Animation_Char05 = new List<Texture2D>();
+        public static List<Texture2D> Textures_Animation_Char06 = new List<Texture2D>();
 
         public static List<Texture2D> Textures_Animation_Player01 = new List<Texture2D>();
         public static List<Texture2D> Textures_Animation_Player02 = new List<Texture2D>();
@@ -377,6 +377,17 @@ namespace Projeto_StreetFighter.Menu
                 ref Textures_Animation_Char03,
                 Content.Load<Texture2D>("Characters/Sagat/00"));
 
+            Other.Functions.LoadTextureFrame(
+                ref Textures_Animation_Char04,
+                Content.Load<Texture2D>("Characters/Ryu/00"));
+
+            Other.Functions.LoadTextureFrame(
+                ref Textures_Animation_Char05,
+                Content.Load<Texture2D>("Characters/Ken/00"));
+
+            Other.Functions.LoadTextureFrame(
+                ref Textures_Animation_Char06,
+                Content.Load<Texture2D>("Characters/Sagat/00"));
 
             for (int i = 0; i < 3; i++)
             {
@@ -430,7 +441,7 @@ namespace Projeto_StreetFighter.Menu
                     Animation.Animator_Controller.OtherAnimation_enum.SelectMenu);
 
             Animation.Animator_Controller.LoadAnimator(
-                    Textures_Animation_Char01, PosicaoInicial.Char04.X, PosicaoInicial.Char04.Y,
+                    Textures_Animation_Char04, PosicaoInicial.Char04.X, PosicaoInicial.Char04.Y,
                     Game1.Variables.FotoSize.Width, Game1.Variables.FotoSize.Height,
                     Game1.Variables.CurrentWindow.SelectPlayer, 120,
                     Animation.Animator_Controller.AnimationType.Normal_Reversed,
@@ -439,7 +450,7 @@ namespace Projeto_StreetFighter.Menu
                     Animation.Animator_Controller.OtherAnimation_enum.SelectMenu);
 
             Animation.Animator_Controller.LoadAnimator(
-                    Textures_Animation_Char02, PosicaoInicial.Char05.X, PosicaoInicial.Char05.Y,
+                    Textures_Animation_Char05, PosicaoInicial.Char05.X, PosicaoInicial.Char05.Y,
                     Game1.Variables.FotoSize.Width, Game1.Variables.FotoSize.Height,
                     Game1.Variables.CurrentWindow.SelectPlayer, 120,
                     Animation.Animator_Controller.AnimationType.Normal_Reversed,
@@ -448,7 +459,7 @@ namespace Projeto_StreetFighter.Menu
                     Animation.Animator_Controller.OtherAnimation_enum.SelectMenu);
 
             Animation.Animator_Controller.LoadAnimator(
-                    Textures_Animation_Char03, PosicaoInicial.Char06.X, PosicaoInicial.Char06.Y,
+                    Textures_Animation_Char06, PosicaoInicial.Char06.X, PosicaoInicial.Char06.Y,
                     Game1.Variables.FotoSize.Width, Game1.Variables.FotoSize.Height,
                     Game1.Variables.CurrentWindow.SelectPlayer, 120,
                     Animation.Animator_Controller.AnimationType.Normal_Reversed,

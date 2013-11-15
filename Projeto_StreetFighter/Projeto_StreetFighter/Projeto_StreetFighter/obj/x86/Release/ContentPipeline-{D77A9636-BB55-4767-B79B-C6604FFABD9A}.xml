@@ -460,6 +460,24 @@
       <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Release\Content\Stages\05.xnb</Output>
       <Time>2013-11-03T21:18:49.1877769-02:00</Time>
     </Item>
+    <Item>
+      <Source>OtherScreens\Credits\Credits.png</Source>
+      <Name>OtherScreens\Credits\Credits</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Release\Content\OtherScreens\Credits\Credits.xnb</Output>
+      <Time>2013-11-15T00:03:42.1260182-02:00</Time>
+    </Item>
+    <Item>
+      <Source>OtherScreens\Load\Load.png</Source>
+      <Name>OtherScreens\Load\Load</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\4periodo\projetoLuta\Projeto_StreetFighter\Projeto_StreetFighter\Projeto_StreetFighter\bin\x86\Release\Content\OtherScreens\Load\Load.xnb</Output>
+      <Time>2013-11-15T00:03:55.3705574-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{D77A9636-BB55-4767-B79B-C6604FFABD9A}</ContentProjectGUID>

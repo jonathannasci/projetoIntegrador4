@@ -16,6 +16,15 @@ namespace Projeto_StreetFighter.Other
         {
             InitializeComponent();
         }
+
+        private void FrmQuit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+                btnQUIT.Focus();
+            else if (e.KeyCode == Keys.D)
+                btnCancel.Focus();
+        }
         
+
     }
 }

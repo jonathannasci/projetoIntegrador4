@@ -158,6 +158,7 @@ namespace Projeto_StreetFighter
             Collision.Collision_Manager.Update();
             BarraEnergia.BarraEnergia_Manager.Update();
             Other.Functions.Update(Variables.Input.New_Key);
+            OtherScreens.LoadScreen_Manager.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -171,7 +172,7 @@ namespace Projeto_StreetFighter
             Menu.SelectStageMenu.Draw(spriteBatch);
             Animation.Animator_Controller.DrawAll(spriteBatch);
             BarraEnergia.BarraEnergia_Manager.Draw(spriteBatch);
-
+            OtherScreens.LoadScreen_Manager.Draw(spriteBatch);
             spriteBatch.End();
             
             base.Draw(gameTime);

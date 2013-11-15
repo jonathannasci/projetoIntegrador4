@@ -12,6 +12,8 @@ namespace Projeto_StreetFighter.Players
 
         public bool IsHealthAtualizado = false;
 
+        public bool IsAbaixado = false;
+
         int X_loc, Y_loc;
 
         Menu.SelectMenu.CharacterList character = Menu.SelectMenu.CharacterList.NULL;

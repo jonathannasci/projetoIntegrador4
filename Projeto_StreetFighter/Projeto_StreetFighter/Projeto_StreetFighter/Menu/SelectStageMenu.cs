@@ -51,15 +51,13 @@ namespace Projeto_StreetFighter.Menu
         }
 
         static Texture2D texture_TelaStages;
-        static List<Texture2D> texture_Stages = new List<Texture2D>();
+        public static List<Texture2D> texture_Stages = new List<Texture2D>();
 
         public static Stages SelectedStage = Stages.NULL;
         public static List<Texture2D> Textures_Animation_Selector = new List<Texture2D>();
 
         static Players.Player P1;
-
-        //static int delay;
-
+        
         static ContentManager Content;
 
 
@@ -113,14 +111,7 @@ namespace Projeto_StreetFighter.Menu
 
             if (!Other.Functions.PermiteKeyPressed(new_key))
                 return;
-
-            //delay += gameTime.ElapsedGameTime.Milliseconds;
-
-            //if (delay < 90)
-            //    return;
-
-            //delay = 0;
-
+            
             if (new_key.IsKeyDown(Keys.S))
             {
 
@@ -162,9 +153,9 @@ namespace Projeto_StreetFighter.Menu
             else if (new_key.IsKeyDown(Keys.Enter))
             {
                 Game1.Variables.Input.keyPressed = Keys.Enter;
-                //OtherScreens.LoadScreen_Manager.ShowLoadScreen(Content);
-                Players.Player_Manager.LoadGame();
-                Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
+                OtherScreens.LoadScreen_Manager.ShowLoadScreen(Content);
+                //Players.Player_Manager.LoadGame();
+                //Game1.Variables.currentWindow = Game1.Variables.CurrentWindow.Game;
             }
 
         }
